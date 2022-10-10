@@ -107,11 +107,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     
     func setupViews(){
-        view.addSubview(titleLabel)
-        view.addSubview(subTitleLabel)
-        view.addSubview(phoneNumberTextField)
-        view.addSubview(loginWithFacebookLabel)
-        view.addSubview(continueBtn)
+        let subViews = [titleLabel, subTitleLabel, phoneNumberTextField, loginWithFacebookLabel, continueBtn]
+        for subView in subViews {
+            view.addSubview(subView)
+        }
         
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),

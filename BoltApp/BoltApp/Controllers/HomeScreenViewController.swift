@@ -6,24 +6,58 @@
 //
 
 import UIKit
+import MapKit
+import FloatingPanel
+import CoreLocation
 
-class HomeScreenViewController: UIViewController {
-
+class HomeScreenViewController: UIViewController, ResultLocationViewControllerDelegate {
+    
+    let locations = [Location]()
+    
+    let panel = FloatingPanelController()
+    
+    lazy var mapView: MKMapView = {
+      let mapView = MKMapView()
+        mapView.overrideUserInterfaceStyle = .dark
+        return mapView
+     }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+        mapView.showsUserLocation = true
+        view.addSubview(mapView)
+        
+        let resultVC = ResultLocationViewController()
+        resultVC.delegate = self
+        
+        panel.set(contentViewController: ResultLocationViewController())
+        panel.addPanel(toParent: self)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        mapView.frame = view.bounds
+        mapView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
+        
     }
-    */
-
+    
+    func searchViewController(_vc: ResultLocationViewController, didSelectLocationWith coordinates: CLLocationCoordinate2D?) {
+        
+        guard let coordinates = coordinates else { return }
+        
+        panel.move(to: .tip, animated: true)
+        
+        mapView.removeAnnotation(mapView.annotations as! MKAnnotation)
+        
+        let pin = MKPointAnnotation()
+        pin.coordinate = coordinates
+        mapView.addAnnotation(pin)
+        
+        mapView.setRegion(MKCoordinateRegion(center: coordinates,
+                                        span: MKCoordinateSpan(
+                                        latitudeDelta: 0.7,
+                                        longitudeDelta: 0.7)),
+                          animated: true)
+    }
 }

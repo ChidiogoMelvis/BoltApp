@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042F317D28F4BEC5002455E9 /* Extension+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F317C28F4BEC5002455E9 /* Extension+Protocol.swift */; };
+		042F317F28F4C388002455E9 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F317E28F4C388002455E9 /* Cell.swift */; };
+		0433CAC528F3344A00495BF8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433CAC428F3344A00495BF8 /* Model.swift */; };
+		0433CAC828F387CC00495BF8 /* Extension+HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433CAC728F387CC00495BF8 /* Extension+HomeViewController.swift */; };
+		0433CACB28F38E5300495BF8 /* ResultLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433CACA28F38E5300495BF8 /* ResultLocationViewController.swift */; };
 		048AC36028F0D445003991A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC35F28F0D445003991A4 /* AppDelegate.swift */; };
 		048AC36228F0D445003991A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC36128F0D445003991A4 /* SceneDelegate.swift */; };
 		048AC36428F0D445003991A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC36328F0D445003991A4 /* ViewController.swift */; };
@@ -16,10 +21,16 @@
 		048AC37628F0D6D2003991A4 /* VerifyCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC37528F0D6D2003991A4 /* VerifyCodeViewController.swift */; };
 		048AC37828F0D714003991A4 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC37728F0D714003991A4 /* HomeScreenViewController.swift */; };
 		048AC37A28F0D75E003991A4 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC37928F0D75E003991A4 /* CustomTextField.swift */; };
-		048AC37C28F0D78C003991A4 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC37B28F0D78C003991A4 /* AuthManager.swift */; };
+		048AC37C28F0D78C003991A4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC37B28F0D78C003991A4 /* LocationManager.swift */; };
+		048DD1DC28F488CD002D82C4 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 048DD1DB28F488CD002D82C4 /* FloatingPanel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042F317C28F4BEC5002455E9 /* Extension+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Protocol.swift"; sourceTree = "<group>"; };
+		042F317E28F4C388002455E9 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		0433CAC428F3344A00495BF8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		0433CAC728F387CC00495BF8 /* Extension+HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+HomeViewController.swift"; sourceTree = "<group>"; };
+		0433CACA28F38E5300495BF8 /* ResultLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultLocationViewController.swift; sourceTree = "<group>"; };
 		048AC35C28F0D445003991A4 /* BoltApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoltApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048AC35F28F0D445003991A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		048AC36128F0D445003991A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +42,7 @@
 		048AC37528F0D6D2003991A4 /* VerifyCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeViewController.swift; sourceTree = "<group>"; };
 		048AC37728F0D714003991A4 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		048AC37928F0D75E003991A4 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		048AC37B28F0D78C003991A4 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		048AC37B28F0D78C003991A4 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,12 +50,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048DD1DC28F488CD002D82C4 /* FloatingPanel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		042F318028F4C390002455E9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				042F317E28F4C388002455E9 /* Cell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0433CAC628F3346600495BF8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0433CAC428F3344A00495BF8 /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0433CAC928F387DB00495BF8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0433CAC728F387CC00495BF8 /* Extension+HomeViewController.swift */,
+				042F317C28F4BEC5002455E9 /* Extension+Protocol.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		048AC35328F0D445003991A4 = {
 			isa = PBXGroup;
 			children = (
@@ -64,9 +101,12 @@
 		048AC35E28F0D445003991A4 /* BoltApp */ = {
 			isa = PBXGroup;
 			children = (
+				0433CAC928F387DB00495BF8 /* Extensions */,
+				0433CAC628F3346600495BF8 /* Models */,
 				048AC38028F0D89F003991A4 /* Delegates */,
-				048AC37E28F0D849003991A4 /* AuthManager */,
+				048AC37E28F0D849003991A4 /* PlacesManager */,
 				048AC37D28F0D7CB003991A4 /* Controllers */,
+				042F318028F4C390002455E9 /* Cell */,
 				048AC37F28F0D87E003991A4 /* ReusableViews */,
 				048AC36828F0D446003991A4 /* Assets.xcassets */,
 				048AC36A28F0D446003991A4 /* LaunchScreen.storyboard */,
@@ -80,18 +120,19 @@
 			children = (
 				048AC36328F0D445003991A4 /* ViewController.swift */,
 				048AC37328F0D5F4003991A4 /* SignUpViewController.swift */,
+				0433CACA28F38E5300495BF8 /* ResultLocationViewController.swift */,
 				048AC37728F0D714003991A4 /* HomeScreenViewController.swift */,
 				048AC37528F0D6D2003991A4 /* VerifyCodeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		048AC37E28F0D849003991A4 /* AuthManager */ = {
+		048AC37E28F0D849003991A4 /* PlacesManager */ = {
 			isa = PBXGroup;
 			children = (
-				048AC37B28F0D78C003991A4 /* AuthManager.swift */,
+				048AC37B28F0D78C003991A4 /* LocationManager.swift */,
 			);
-			path = AuthManager;
+			path = PlacesManager;
 			sourceTree = "<group>";
 		};
 		048AC37F28F0D87E003991A4 /* ReusableViews */ = {
@@ -127,6 +168,9 @@
 			dependencies = (
 			);
 			name = BoltApp;
+			packageProductDependencies = (
+				048DD1DB28F488CD002D82C4 /* FloatingPanel */,
+			);
 			productName = BoltApp;
 			productReference = 048AC35C28F0D445003991A4 /* BoltApp.app */;
 			productType = "com.apple.product-type.application";
@@ -155,6 +199,9 @@
 				Base,
 			);
 			mainGroup = 048AC35328F0D445003991A4;
+			packageReferences = (
+				048DD1DA28F488CD002D82C4 /* XCRemoteSwiftPackageReference "FloatingPanel" */,
+			);
 			productRefGroup = 048AC35D28F0D445003991A4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -181,12 +228,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0433CACB28F38E5300495BF8 /* ResultLocationViewController.swift in Sources */,
 				048AC37A28F0D75E003991A4 /* CustomTextField.swift in Sources */,
-				048AC37C28F0D78C003991A4 /* AuthManager.swift in Sources */,
+				048AC37C28F0D78C003991A4 /* LocationManager.swift in Sources */,
 				048AC36428F0D445003991A4 /* ViewController.swift in Sources */,
 				048AC37628F0D6D2003991A4 /* VerifyCodeViewController.swift in Sources */,
+				042F317F28F4C388002455E9 /* Cell.swift in Sources */,
 				048AC36028F0D445003991A4 /* AppDelegate.swift in Sources */,
+				0433CAC528F3344A00495BF8 /* Model.swift in Sources */,
 				048AC37428F0D5F4003991A4 /* SignUpViewController.swift in Sources */,
+				0433CAC828F387CC00495BF8 /* Extension+HomeViewController.swift in Sources */,
+				042F317D28F4BEC5002455E9 /* Extension+Protocol.swift in Sources */,
 				048AC36228F0D445003991A4 /* SceneDelegate.swift in Sources */,
 				048AC37828F0D714003991A4 /* HomeScreenViewController.swift in Sources */,
 			);
@@ -394,6 +446,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		048DD1DA28F488CD002D82C4 /* XCRemoteSwiftPackageReference "FloatingPanel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SCENEE/FloatingPanel";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		048DD1DB28F488CD002D82C4 /* FloatingPanel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 048DD1DA28F488CD002D82C4 /* XCRemoteSwiftPackageReference "FloatingPanel" */;
+			productName = FloatingPanel;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 048AC35428F0D445003991A4 /* Project object */;
 }

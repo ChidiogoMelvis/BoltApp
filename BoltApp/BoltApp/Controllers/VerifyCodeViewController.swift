@@ -114,16 +114,16 @@ class VerifyCodeViewController: UIViewController, UITextFieldDelegate {
     
     @objc func tapButtonVc() {
         let vc = HomeScreenViewController()
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
+        self.present(nav, animated: true)
     }
   
     func setUpViews() {
-        view.addSubview(titleLabel)
-        view.addSubview(subTitleLabel)
-        view.addSubview(editLabel)
-        view.addSubview(stackView)
-        view.addSubview(continueBtn)
+        let subViews = [titleLabel, subTitleLabel, editLabel, stackView, continueBtn]
+        for subView in subViews {
+            view.addSubview(subView)
+        }
         
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 70),
