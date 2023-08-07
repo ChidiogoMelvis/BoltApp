@@ -11,7 +11,7 @@ import MapKit
 
 class ResultLocationViewController: UIViewController, UITextFieldDelegate {
     
-    var currentLocation: CLLocationCoordinate2D?
+    //var currentLocation: CLLocationCoordinate2D?
 
     var delegate: ResultLocationViewControllerDelegate?
     
@@ -102,7 +102,7 @@ class ResultLocationViewController: UIViewController, UITextFieldDelegate {
                     self?.locations = locations
                     self?.tableview.reloadData()
                 case .failure(let error):
-                    print("Error finding location: \(error)")
+                    print("\(error.localizedDescription)")
                 }
             }
         }

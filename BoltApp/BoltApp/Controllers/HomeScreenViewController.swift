@@ -43,34 +43,28 @@ class HomeScreenViewController: UIViewController, ResultLocationViewControllerDe
     }
     
 //    func searchViewController(_vc: ResultLocationViewController, didSelectLocationWith coordinates: CLLocationCoordinate2D?) {
-//
 //        guard let coordinates = coordinates else { return }
-//
-//        panel.move(to: .tip, animated: true)
-//
-//        mapView.removeAnnotation(mapView.annotations as! MKAnnotation)
 //
 //        let pin = MKPointAnnotation()
 //        pin.coordinate = coordinates
 //        mapView.addAnnotation(pin)
 //
 //        mapView.setRegion(MKCoordinateRegion(center: coordinates,
-//                                        span: MKCoordinateSpan(
-//                                        latitudeDelta: 0.7,
-//                                        longitudeDelta: 0.7)),
+//                                            span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)),
 //                          animated: true)
 //    }
     
-    func searchViewController(_vc: ResultLocationViewController, didSelectLocationWith coordinates: CLLocationCoordinate2D?) {
-        guard let coordinates = coordinates else { return }
+    func searchViewController(_vc vc: ResultLocationViewController, didSelectLocationWith coordinates: CLLocationCoordinate2D?) {
+            guard let coordinates = coordinates else { return }
+            panel.move(to: .tip, animated: true)
 
-        let pin = MKPointAnnotation()
-        pin.coordinate = coordinates
-        mapView.addAnnotation(pin)
+            mapView.removeAnnotations(mapView.annotations)
 
-        mapView.setRegion(MKCoordinateRegion(center: coordinates,
-                                            span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)),
-                          animated: true)
-    }
+            let pin = MKPointAnnotation()
+            pin.coordinate = coordinates
+            mapView.addAnnotation(pin)
+
+            mapView.setRegion(MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
+        }
 
 }
