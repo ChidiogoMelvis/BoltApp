@@ -17,8 +17,6 @@
 		048AC36428F0D445003991A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC36328F0D445003991A4 /* ViewController.swift */; };
 		048AC36928F0D446003991A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048AC36828F0D446003991A4 /* Assets.xcassets */; };
 		048AC36C28F0D446003991A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048AC36A28F0D446003991A4 /* LaunchScreen.storyboard */; };
-		048AC37428F0D5F4003991A4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC37328F0D5F4003991A4 /* SignUpViewController.swift */; };
-		048AC37628F0D6D2003991A4 /* VerifyCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC37528F0D6D2003991A4 /* VerifyCodeViewController.swift */; };
 		048AC37828F0D714003991A4 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC37728F0D714003991A4 /* HomeScreenViewController.swift */; };
 		048AC37A28F0D75E003991A4 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC37928F0D75E003991A4 /* CustomTextField.swift */; };
 		048AC37C28F0D78C003991A4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC37B28F0D78C003991A4 /* LocationManager.swift */; };
@@ -38,8 +36,6 @@
 		048AC36828F0D446003991A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048AC36B28F0D446003991A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		048AC36D28F0D446003991A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		048AC37328F0D5F4003991A4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		048AC37528F0D6D2003991A4 /* VerifyCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeViewController.swift; sourceTree = "<group>"; };
 		048AC37728F0D714003991A4 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		048AC37928F0D75E003991A4 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		048AC37B28F0D78C003991A4 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -119,10 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				048AC36328F0D445003991A4 /* ViewController.swift */,
-				048AC37328F0D5F4003991A4 /* SignUpViewController.swift */,
 				0433CACA28F38E5300495BF8 /* ResultLocationViewController.swift */,
 				048AC37728F0D714003991A4 /* HomeScreenViewController.swift */,
-				048AC37528F0D6D2003991A4 /* VerifyCodeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -232,11 +226,9 @@
 				048AC37A28F0D75E003991A4 /* CustomTextField.swift in Sources */,
 				048AC37C28F0D78C003991A4 /* LocationManager.swift in Sources */,
 				048AC36428F0D445003991A4 /* ViewController.swift in Sources */,
-				048AC37628F0D6D2003991A4 /* VerifyCodeViewController.swift in Sources */,
 				042F317F28F4C388002455E9 /* Cell.swift in Sources */,
 				048AC36028F0D445003991A4 /* AppDelegate.swift in Sources */,
 				0433CAC528F3344A00495BF8 /* Model.swift in Sources */,
-				048AC37428F0D5F4003991A4 /* SignUpViewController.swift in Sources */,
 				0433CAC828F387CC00495BF8 /* Extension+HomeViewController.swift in Sources */,
 				042F317D28F4BEC5002455E9 /* Extension+Protocol.swift in Sources */,
 				048AC36228F0D445003991A4 /* SceneDelegate.swift in Sources */,
