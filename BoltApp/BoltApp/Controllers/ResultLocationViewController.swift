@@ -11,6 +11,8 @@ import MapKit
 
 class ResultLocationViewController: UIViewController, UITextFieldDelegate {
     
+    var currentLocation: CLLocationCoordinate2D?
+
     var delegate: ResultLocationViewControllerDelegate?
     
     lazy var greetingLabel: UILabel = {
@@ -50,6 +52,7 @@ class ResultLocationViewController: UIViewController, UITextFieldDelegate {
         let table = UITableView()
         table.dataSource = self
         table.delegate = self
+        table.backgroundColor = .gray
         table.translatesAutoresizingMaskIntoConstraints = false
         table.register(Cell.self, forCellReuseIdentifier: "Cell")
         
@@ -92,15 +95,19 @@ class ResultLocationViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        if let text = textField.text, !text.isEmpty{
-        LocationManager.shared.findLocation(with: text) { [weak self] locations in
-            DispatchQueue.main.async {
-                self?.locations = self!.locations
-                self?.tableview.reloadData()
-              }
+        if let text = textField.text, !text.isEmpty {
+            LocationManager.shared.findLocation(with: text) { [weak self] result in
+                switch result {
+                case .success(let locations):
+                    self?.locations = locations
+                    self?.tableview.reloadData()
+                case .failure(let error):
+                    print("Error finding location: \(error)")
+                }
             }
         }
         return true
     }
+
     
 }
