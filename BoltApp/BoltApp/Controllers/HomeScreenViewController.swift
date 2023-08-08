@@ -38,24 +38,22 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         mapView.frame = view.bounds
-        mapView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
         
     }
     
     func searchViewController(_ vc: ResultLocationViewController, didSelectLocation location: Location) {
-        panel.move(to: .tip, animated: true)
+           panel.move(to: .tip, animated: true)
 
-        mapView.removeAnnotations(mapView.annotations)
+           mapView.removeAnnotations(mapView.annotations)
 
-        if let coordinates = location.coordinates {
-            let pin = MKPointAnnotation()
-            pin.coordinate = coordinates
-            pin.title = location.name
-            mapView.addAnnotation(pin)
+           if let coordinates = location.coordinates {
+               let pin = MKPointAnnotation()
+               pin.coordinate = coordinates
+               pin.title = location.name
+               mapView.addAnnotation(pin)
 
-            mapView.setRegion(MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
-        }
-    }
-
+               mapView.setRegion(MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
+           }
+       }
 
 }
