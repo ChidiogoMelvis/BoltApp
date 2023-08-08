@@ -25,19 +25,19 @@ class LocationManager: NSObject {
             let models: [Location] = places.compactMap { place in
                 var name = ""
                 if let locationName = place.name{
-                    name += locationName
+                    name = "\(locationName)"
                 }
                 
                 if let region = place.administrativeArea{
-                    name += "\(region)"
+                    name = "\(region)"
                 }
                 
                 if let locality = place.locality{
-                    name += "\(locality)"
+                    name = "\(locality)"
                 }
                 
                 if let country = place.country{
-                    name += "\(country)"
+                    name = "\(country)"
                 }
                 
                 print("\n\(place)\n\n")

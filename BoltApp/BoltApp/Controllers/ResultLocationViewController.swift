@@ -12,8 +12,10 @@ import MapKit
 class ResultLocationViewController: UIViewController, UITextFieldDelegate {
     
     //var currentLocation: CLLocationCoordinate2D?
+    
+    
 
-    var delegate: ResultLocationViewControllerDelegate?
+    var delegate: ResultLocationDelegate?
     
     lazy var greetingLabel: UILabel = {
         let label = UILabel()

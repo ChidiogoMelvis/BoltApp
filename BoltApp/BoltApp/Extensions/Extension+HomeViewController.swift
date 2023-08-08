@@ -24,15 +24,9 @@ extension ResultLocationViewController: UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let coordinate = locations[indexPath.row].coordinates
-
-        delegate?.searchViewController(_vc: self, didSelectLocationWith: coordinate)
+        let selectedLocation = locations[indexPath.row]
+        delegate?.searchViewController(self, didSelectLocation: selectedLocation)
     }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        let coordinate = locations[indexPath.row].coordinates
-//        currentLocation = coordinate
-//        delegate?.searchViewController(_vc: self, didSelectLocationWith: coordinate)
-//    }
+
     
 }

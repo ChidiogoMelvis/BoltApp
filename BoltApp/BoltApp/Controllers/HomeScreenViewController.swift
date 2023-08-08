@@ -10,7 +10,7 @@ import MapKit
 import FloatingPanel
 import CoreLocation
 
-class HomeScreenViewController: UIViewController, ResultLocationViewControllerDelegate {
+class HomeScreenViewController: UIViewController, ResultLocationDelegate {
     
     let locations = [Location]()
     
@@ -31,7 +31,7 @@ class HomeScreenViewController: UIViewController, ResultLocationViewControllerDe
         let resultVC = ResultLocationViewController()
         resultVC.delegate = self
         
-        panel.set(contentViewController: ResultLocationViewController())
+        panel.set(contentViewController: resultVC) 
         panel.addPanel(toParent: self)
     }
     
@@ -42,29 +42,20 @@ class HomeScreenViewController: UIViewController, ResultLocationViewControllerDe
         
     }
     
-//    func searchViewController(_vc: ResultLocationViewController, didSelectLocationWith coordinates: CLLocationCoordinate2D?) {
-//        guard let coordinates = coordinates else { return }
-//
-//        let pin = MKPointAnnotation()
-//        pin.coordinate = coordinates
-//        mapView.addAnnotation(pin)
-//
-//        mapView.setRegion(MKCoordinateRegion(center: coordinates,
-//                                            span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)),
-//                          animated: true)
-//    }
-    
-    func searchViewController(_vc vc: ResultLocationViewController, didSelectLocationWith coordinates: CLLocationCoordinate2D?) {
-            guard let coordinates = coordinates else { return }
-            panel.move(to: .tip, animated: true)
+    func searchViewController(_ vc: ResultLocationViewController, didSelectLocation location: Location) {
+        panel.move(to: .tip, animated: true)
 
-            mapView.removeAnnotations(mapView.annotations)
+        mapView.removeAnnotations(mapView.annotations)
 
+        if let coordinates = location.coordinates {
             let pin = MKPointAnnotation()
             pin.coordinate = coordinates
+            pin.title = location.name
             mapView.addAnnotation(pin)
 
             mapView.setRegion(MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
         }
+    }
+
 
 }
