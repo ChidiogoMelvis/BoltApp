@@ -61,7 +61,13 @@ class ResultLocationViewController: UIViewController, UITextFieldDelegate {
         return table
     }()
     
-    var locations = [Location]()
+    var locations: [Location] = [] {
+            didSet {
+                DispatchQueue.main.async {
+                    self.tableview.reloadData()
+                }
+            }
+        }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,21 +101,34 @@ class ResultLocationViewController: UIViewController, UITextFieldDelegate {
         ])
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        if let text = textField.text, !text.isEmpty {
-            LocationManager.shared.findLocation(with: text) { [weak self] result in
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        if let text = textField.text, !text.isEmpty {
+//            LocationManager.shared.findLocation(with: text) { [weak self] result in
+//                switch result {
+//                case .success(let locations):
+//                    self?.locations = locations
+//                    self?.tableview.reloadData()
+//                case .failure(let error):
+//                    print("\(error.localizedDescription)")
+//                }
+//            }
+//        }
+//        return true
+//    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+            let searchText = (textField.text ?? "") + string
+            LocationManager.shared.findLocation(with: searchText) { [weak self] result in
                 switch result {
                 case .success(let locations):
                     self?.locations = locations
-                    self?.tableview.reloadData()
                 case .failure(let error):
-                    print("\(error.localizedDescription)")
+                    print("Error fetching locations: \(error)")
                 }
             }
+            return true
         }
-        return true
-    }
 
     
 }

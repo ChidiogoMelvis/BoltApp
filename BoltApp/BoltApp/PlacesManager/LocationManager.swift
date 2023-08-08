@@ -11,11 +11,10 @@ import MapKit
 
 class LocationManager: NSObject {
     static let shared = LocationManager()
-    
     func findLocation(with: String,
                       completion: @escaping (Result<[Location], Error>) -> Void)
     {
-      let geoCoder = CLGeocoder()
+        let geoCoder = CLGeocoder()
         geoCoder.geocodeAddressString(with) { places, error in
             guard let places = places, error == nil else {
                 completion(.success([]))
@@ -23,30 +22,32 @@ class LocationManager: NSObject {
             }
             
             let models: [Location] = places.compactMap { place in
-                var name = ""
-                if let locationName = place.name{
-                    name = "\(locationName)"
+                var nameComponents: [String] = []
+                
+                if let locationName = place.name {
+                    nameComponents.append(locationName)
                 }
                 
-                if let region = place.administrativeArea{
-                    name = "\(region)"
+                if let region = place.administrativeArea {
+                    nameComponents.append(region)
                 }
                 
-                if let locality = place.locality{
-                    name = "\(locality)"
+                if let locality = place.locality {
+                    nameComponents.append(locality)
                 }
                 
-                if let country = place.country{
-                    name = "\(country)"
+                if let country = place.country {
+                    nameComponents.append(country)
                 }
                 
+                let combinedName = nameComponents.joined(separator: ", ")
                 print("\n\(place)\n\n")
                 
-                let result = Location(name: name, coordinates: place.location?.coordinate)
+                let result = Location(name: combinedName, coordinates: place.location?.coordinate)
                 return result
             }
             completion(.success(models))
         }
-        
     }
+
 }
