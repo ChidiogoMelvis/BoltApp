@@ -13,6 +13,8 @@ class SignupViewController: UIViewController {
         let textfield = UITextField()
         textfield.translatesAutoresizingMaskIntoConstraints = false
         textfield.placeholder = "email"
+        textfield.layer.borderWidth = 1
+        textfield.layer.borderColor = CGColor(red: 0, green: 100, blue: 0, alpha: 100)
         return textfield
         
     }()
@@ -21,6 +23,8 @@ class SignupViewController: UIViewController {
         let textfield = UITextField()
         textfield.translatesAutoresizingMaskIntoConstraints = false
         textfield.placeholder = "password"
+        textfield.layer.borderWidth = 1
+        textfield.layer.borderColor = CGColor(red: 0, green: 100, blue: 0, alpha: 100)
         return textfield
         
     }()
@@ -39,13 +43,13 @@ class SignupViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             emailTextField.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
-            emailTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),
-            emailTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
+            emailTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            emailTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             emailTextField.heightAnchor.constraint(equalToConstant: 48),
             
             passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 20),
-            passwordTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),
-            passwordTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
+            passwordTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            passwordTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             passwordTextField.heightAnchor.constraint(equalToConstant: 48)
         ])
     }
