@@ -14,6 +14,10 @@ class SignupViewController: UIViewController {
         textfield.translatesAutoresizingMaskIntoConstraints = false
         textfield.placeholder = "email"
         textfield.layer.borderWidth = 1
+        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textfield.frame.height))
+        textfield.leftView = leftView
+        textfield.leftViewMode = .always
+        textfield.layer.cornerRadius = 8
         textfield.layer.borderColor = CGColor(red: 0, green: 100, blue: 0, alpha: 100)
         return textfield
         
@@ -24,6 +28,10 @@ class SignupViewController: UIViewController {
         textfield.translatesAutoresizingMaskIntoConstraints = false
         textfield.placeholder = "password"
         textfield.layer.borderWidth = 1
+        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textfield.frame.height))
+        textfield.leftView = leftView
+        textfield.leftViewMode = .always
+        textfield.layer.cornerRadius = 8
         textfield.layer.borderColor = CGColor(red: 0, green: 100, blue: 0, alpha: 100)
         return textfield
         
@@ -33,16 +41,22 @@ class SignupViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
         view.backgroundColor = .white
+        //setTitleColor()
+        title = "Signup"
         // Do any additional setup after loading the view.
     }
     
+//    func setTitleColor() {
+//        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.green]
+//    }
+//
 
     func setupViews() {
         view.addSubview(emailTextField)
         view.addSubview(passwordTextField)
         
         NSLayoutConstraint.activate([
-            emailTextField.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            emailTextField.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
             emailTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             emailTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             emailTextField.heightAnchor.constraint(equalToConstant: 48),
