@@ -20,6 +20,7 @@
 		048AC37C28F0D78C003991A4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC37B28F0D78C003991A4 /* LocationManager.swift */; };
 		048DD1DC28F488CD002D82C4 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 048DD1DB28F488CD002D82C4 /* FloatingPanel */; };
 		04D355CF2A80F283001055AF /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D355CE2A80F283001055AF /* Cell.swift */; };
+		04D355D12A83BDF2001055AF /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D355D02A83BDF2001055AF /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		048AC37728F0D714003991A4 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		048AC37B28F0D78C003991A4 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		04D355CE2A80F283001055AF /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		04D355D02A83BDF2001055AF /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				048AC36328F0D445003991A4 /* ViewController.swift */,
 				0433CACA28F38E5300495BF8 /* ResultLocationViewController.swift */,
 				048AC37728F0D714003991A4 /* HomeScreenViewController.swift */,
+				04D355D02A83BDF2001055AF /* SignupViewController.swift */,
 				04D355CE2A80F283001055AF /* Cell.swift */,
 			);
 			path = Controllers;
@@ -210,6 +213,7 @@
 				0433CAC528F3344A00495BF8 /* Model.swift in Sources */,
 				04D355CF2A80F283001055AF /* Cell.swift in Sources */,
 				0433CAC828F387CC00495BF8 /* Extension+HomeViewController.swift in Sources */,
+				04D355D12A83BDF2001055AF /* SignupViewController.swift in Sources */,
 				042F317D28F4BEC5002455E9 /* Extension+Protocol.swift in Sources */,
 				048AC36228F0D445003991A4 /* SceneDelegate.swift in Sources */,
 				048AC37828F0D714003991A4 /* HomeScreenViewController.swift in Sources */,
