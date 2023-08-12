@@ -20,7 +20,9 @@
 		048AC37C28F0D78C003991A4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC37B28F0D78C003991A4 /* LocationManager.swift */; };
 		048DD1DC28F488CD002D82C4 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 048DD1DB28F488CD002D82C4 /* FloatingPanel */; };
 		04D355CF2A80F283001055AF /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D355CE2A80F283001055AF /* Cell.swift */; };
-		04D355D32A84787A001055AF /* SegmentedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D355D22A84787A001055AF /* SegmentedController.swift */; };
+		04D355DC2A867B9A001055AF /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D355DB2A867B9A001055AF /* SignupViewController.swift */; };
+		04D355DE2A867BA7001055AF /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D355DD2A867BA7001055AF /* SigninViewController.swift */; };
+		04D355E12A87031B001055AF /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D355E02A87031B001055AF /* TextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +40,9 @@
 		048AC37728F0D714003991A4 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		048AC37B28F0D78C003991A4 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		04D355CE2A80F283001055AF /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
-		04D355D22A84787A001055AF /* SegmentedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedController.swift; sourceTree = "<group>"; };
+		04D355DB2A867B9A001055AF /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		04D355DD2A867BA7001055AF /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		04D355E02A87031B001055AF /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 		048AC35E28F0D445003991A4 /* BoltApp */ = {
 			isa = PBXGroup;
 			children = (
+				04D355DF2A8702B9001055AF /* ReusableViews */,
 				0433CAC928F387DB00495BF8 /* Extensions */,
 				0433CAC628F3346600495BF8 /* Models */,
 				048AC38028F0D89F003991A4 /* Delegates */,
@@ -107,7 +112,8 @@
 				048AC36328F0D445003991A4 /* ViewController.swift */,
 				0433CACA28F38E5300495BF8 /* ResultLocationViewController.swift */,
 				048AC37728F0D714003991A4 /* HomeScreenViewController.swift */,
-				04D355D22A84787A001055AF /* SegmentedController.swift */,
+				04D355DB2A867B9A001055AF /* SignupViewController.swift */,
+				04D355DD2A867BA7001055AF /* SigninViewController.swift */,
 				04D355CE2A80F283001055AF /* Cell.swift */,
 			);
 			path = Controllers;
@@ -128,6 +134,14 @@
 				048AC36128F0D445003991A4 /* SceneDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		04D355DF2A8702B9001055AF /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				04D355E02A87031B001055AF /* TextField.swift */,
+			);
+			path = ReusableViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,12 +222,14 @@
 			files = (
 				0433CACB28F38E5300495BF8 /* ResultLocationViewController.swift in Sources */,
 				048AC37C28F0D78C003991A4 /* LocationManager.swift in Sources */,
+				04D355DC2A867B9A001055AF /* SignupViewController.swift in Sources */,
 				048AC36428F0D445003991A4 /* ViewController.swift in Sources */,
 				048AC36028F0D445003991A4 /* AppDelegate.swift in Sources */,
+				04D355E12A87031B001055AF /* TextField.swift in Sources */,
 				0433CAC528F3344A00495BF8 /* Model.swift in Sources */,
 				04D355CF2A80F283001055AF /* Cell.swift in Sources */,
 				0433CAC828F387CC00495BF8 /* Extension+HomeViewController.swift in Sources */,
-				04D355D32A84787A001055AF /* SegmentedController.swift in Sources */,
+				04D355DE2A867BA7001055AF /* SigninViewController.swift in Sources */,
 				042F317D28F4BEC5002455E9 /* Extension+Protocol.swift in Sources */,
 				048AC36228F0D445003991A4 /* SceneDelegate.swift in Sources */,
 				048AC37828F0D714003991A4 /* HomeScreenViewController.swift in Sources */,
