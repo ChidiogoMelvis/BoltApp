@@ -16,7 +16,7 @@ class TextField: UITextField {
             translatesAutoresizingMaskIntoConstraints = false
             layer.borderWidth = 1
             font = UIFont(name: "", size: 18)
-            textColor = .systemGray6
+            textColor = .gray
             layer.borderColor = #colorLiteral(red: 0.2039215686, green: 0.8196078431, blue: 0.5254901961, alpha: 1)
             layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             layer.cornerRadius = 5
@@ -25,7 +25,7 @@ class TextField: UITextField {
         self.placeholder = placeholder
         self.isSecureTextEntry = isSecureTextEntry
         //self.placeholder = placeholder
-            attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+            attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray5])
         }
         
         required init?(coder: NSCoder) {
