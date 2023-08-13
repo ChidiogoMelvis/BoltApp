@@ -16,6 +16,8 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
     
     let panel = FloatingPanelController()
     
+    let sideBarButton = Button(image: UIImage(systemName: "text.justify"), label: "", btnColor: .black, backgroundColor: .clear, radius: 0, imageColor: .black)
+    
     lazy var mapView: MKMapView = {
       let mapView = MKMapView()
         mapView.overrideUserInterfaceStyle = .dark
@@ -24,6 +26,7 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupButton()
         view.backgroundColor = .white
         mapView.showsUserLocation = true
         view.addSubview(mapView)
@@ -55,5 +58,13 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
                mapView.setRegion(MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
            }
        }
+    
+    func setupButton() {
+        view.addSubview(sideBarButton)
+        NSLayoutConstraint.activate([
+            sideBarButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 70),
+            sideBarButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14)
+        ])
+    }
 
 }

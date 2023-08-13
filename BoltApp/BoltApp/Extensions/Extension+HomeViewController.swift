@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 
 extension ResultLocationViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return locations.count
     }
