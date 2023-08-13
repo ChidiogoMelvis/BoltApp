@@ -38,7 +38,7 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         mapView.frame = view.bounds
-        
+        mapView.frame = CGRect(x: 0, y: 120, width: view.bounds.width, height: view.bounds.height)
     }
     
     func searchViewController(_ vc: ResultLocationViewController, didSelectLocation location: Location) {

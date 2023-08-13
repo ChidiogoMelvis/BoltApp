@@ -24,6 +24,7 @@
 		04D355DE2A867BA7001055AF /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D355DD2A867BA7001055AF /* CreateAccountViewController.swift */; };
 		04D355E12A87031B001055AF /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D355E02A87031B001055AF /* TextField.swift */; };
 		04D355E32A87D38B001055AF /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D355E22A87D38B001055AF /* Button.swift */; };
+		04D355E72A88A2D6001055AF /* CustomSideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D355E62A88A2D6001055AF /* CustomSideBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		04D355DD2A867BA7001055AF /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		04D355E02A87031B001055AF /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		04D355E22A87D38B001055AF /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		04D355E62A88A2D6001055AF /* CustomSideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSideBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				04D355E02A87031B001055AF /* TextField.swift */,
+				04D355E62A88A2D6001055AF /* CustomSideBar.swift */,
 				04D355E22A87D38B001055AF /* Button.swift */,
 			);
 			path = ReusableViews;
@@ -226,6 +229,7 @@
 				0433CACB28F38E5300495BF8 /* ResultLocationViewController.swift in Sources */,
 				048AC37C28F0D78C003991A4 /* LocationManager.swift in Sources */,
 				04D355DC2A867B9A001055AF /* SigninViewController.swift in Sources */,
+				04D355E72A88A2D6001055AF /* CustomSideBar.swift in Sources */,
 				048AC36428F0D445003991A4 /* ViewController.swift in Sources */,
 				048AC36028F0D445003991A4 /* AppDelegate.swift in Sources */,
 				04D355E12A87031B001055AF /* TextField.swift in Sources */,
