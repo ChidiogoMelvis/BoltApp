@@ -19,10 +19,10 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
     let sideBarButton = Button(image: UIImage(systemName: "text.justify"), label: "", btnColor: .clear, backgroundColor: .clear, radius: 0, imageColor: .black)
     
     lazy var mapView: MKMapView = {
-      let mapView = MKMapView()
+        let mapView = MKMapView()
         mapView.overrideUserInterfaceStyle = .dark
         return mapView
-     }()
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,19 +45,19 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
     }
     
     func searchViewController(_ vc: ResultLocationViewController, didSelectLocation location: Location) {
-           panel.move(to: .tip, animated: true)
-
-           mapView.removeAnnotations(mapView.annotations)
-
-           if let coordinates = location.coordinates {
-               let pin = MKPointAnnotation()
-               pin.coordinate = coordinates
-               pin.title = location.name
-               mapView.addAnnotation(pin)
-
-               mapView.setRegion(MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
-           }
-       }
+        panel.move(to: .tip, animated: true)
+        
+        mapView.removeAnnotations(mapView.annotations)
+        
+        if let coordinates = location.coordinates {
+            let pin = MKPointAnnotation()
+            pin.coordinate = coordinates
+            pin.title = location.name
+            mapView.addAnnotation(pin)
+            
+            mapView.setRegion(MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
+        }
+    }
     
     func setupButton() {
         view.addSubview(sideBarButton)
@@ -66,5 +66,5 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
             sideBarButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14)
         ])
     }
-
+    
 }

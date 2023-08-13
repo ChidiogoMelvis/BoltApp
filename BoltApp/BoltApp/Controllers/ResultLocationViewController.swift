@@ -58,13 +58,13 @@ class ResultLocationViewController: UIViewController, UITextFieldDelegate {
     }()
     
     var locations: [Location] = [] {
-            didSet {
-                DispatchQueue.main.async {
-                    self.tableview.reloadData()
-                }
+        didSet {
+            DispatchQueue.main.async {
+                self.tableview.reloadData()
             }
         }
-
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .secondarySystemBackground
@@ -98,16 +98,16 @@ class ResultLocationViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-            let searchText = (textField.text ?? "") + string
-            LocationManager.shared.findLocation(with: searchText) { [weak self] result in
-                switch result {
-                case .success(let locations):
-                    self?.locations = locations
-                case .failure(let error):
-                    print("Error fetching locations: \(error)")
-                }
+        let searchText = (textField.text ?? "") + string
+        LocationManager.shared.findLocation(with: searchText) { [weak self] result in
+            switch result {
+            case .success(let locations):
+                self?.locations = locations
+            case .failure(let error):
+                print("Error fetching locations: \(error)")
             }
-            return true
         }
-
+        return true
+    }
+    
 }
