@@ -16,7 +16,7 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
     
     let panel = FloatingPanelController()
     
-    let sideBarButton = Button(image: UIImage(systemName: "text.justify"), label: "", btnColor: .black, backgroundColor: .clear, radius: 0, imageColor: .black)
+    let sideBarButton = Button(image: UIImage(systemName: "text.justify"), label: "", btnColor: .clear, backgroundColor: .clear, radius: 0, imageColor: .black)
     
     lazy var mapView: MKMapView = {
       let mapView = MKMapView()
