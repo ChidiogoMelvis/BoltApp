@@ -12,15 +12,15 @@ import CoreLocation
 
 class HomeScreenViewController: UIViewController, ResultLocationDelegate {
     
-    //let locations = [Location]()
-    
     let panel = FloatingPanelController()
     
-    let sidebarView = CustomSidebar()
+    var customSidebar = CustomSidebar()
     
     var isSidebarVisible = false
     
-    let sideBarButton = Button(image: UIImage(systemName: "text.justify"), label: "", btnTitleColor: .clear, backgroundColor: .clear, radius: 0, imageColor: .black)
+    let sidebarWidth: CGFloat = 250
+    
+    let sideBarButton = Button(image: UIImage(systemName: "line.3.horizontal"), label: "", btnTitleColor: .clear, backgroundColor: .clear, radius: 0, imageColor: .black)
     
     lazy var mapView: MKMapView = {
         let mapView = MKMapView()
@@ -33,10 +33,9 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
         super.viewDidLoad()
         setupButton()
         view.backgroundColor = .white
-        mapView.showsUserLocation = true
-        view.addSubview(mapView)
+        setupMapView()
         setupResultVC()
-        sideBarButton.addTarget(self, action: #selector(showSidebarButtonTapped), for: .touchUpInside)
+        setupDismissControl()
     }
     
     override func viewDidLayoutSubviews() {
@@ -45,12 +44,17 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
         mapView.frame = CGRect(x: 0, y: 100, width: view.bounds.width, height: view.bounds.height)
     }
     
+    func setupMapView() {
+        mapView.showsUserLocation = true
+        view.addSubview(mapView)
+    }
+    
     func setupResultVC() {
         let resultVC = ResultLocationViewController()
-            resultVC.delegate = self
-            
-            panel.set(contentViewController: resultVC)
-            panel.addPanel(toParent: self)
+        resultVC.delegate = self
+        
+        panel.set(contentViewController: resultVC)
+        panel.addPanel(toParent: self)
     }
     
     func searchViewController(_ vc: ResultLocationViewController, didSelectLocation location: Location) {
@@ -67,6 +71,13 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
             mapView.setRegion(MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
         }
     }
-
-   
+    
+    func setupDismissControl() {
+        sideBarButton.addTarget(self, action: #selector(showSidebarButtonTapped), for: .touchUpInside)
+        let dismissControl = DismissControl()
+                dismissControl.addTarget(self, action: #selector(dismissSidebar), for: .touchUpInside)
+                customSidebar.addSubview(dismissControl)
+                dismissControl.frame = customSidebar.bounds
+    }
+    
 }

@@ -14,6 +14,7 @@
 		04802FFD2A89B68500861547 /* Extension+HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04802FFC2A89B68500861547 /* Extension+HomeScreenViewController.swift */; };
 		04802FFF2A89BAAE00861547 /* SidebarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04802FFE2A89BAAE00861547 /* SidebarCell.swift */; };
 		048030022A89BB2800861547 /* Extension+CustomSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048030012A89BB2800861547 /* Extension+CustomSidebar.swift */; };
+		048030082A8A0BED00861547 /* DismissControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048030072A8A0BED00861547 /* DismissControl.swift */; };
 		048AC36028F0D445003991A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC35F28F0D445003991A4 /* AppDelegate.swift */; };
 		048AC36228F0D445003991A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC36128F0D445003991A4 /* SceneDelegate.swift */; };
 		048AC36428F0D445003991A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC36328F0D445003991A4 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 		04802FFC2A89B68500861547 /* Extension+HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+HomeScreenViewController.swift"; sourceTree = "<group>"; };
 		04802FFE2A89BAAE00861547 /* SidebarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarCell.swift; sourceTree = "<group>"; };
 		048030012A89BB2800861547 /* Extension+CustomSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CustomSidebar.swift"; sourceTree = "<group>"; };
+		048030072A8A0BED00861547 /* DismissControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissControl.swift; sourceTree = "<group>"; };
 		048AC35C28F0D445003991A4 /* BoltApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoltApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048AC35F28F0D445003991A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		048AC36128F0D445003991A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			children = (
 				04D355E02A87031B001055AF /* TextField.swift */,
 				04D355E62A88A2D6001055AF /* CustomSidebar.swift */,
+				048030072A8A0BED00861547 /* DismissControl.swift */,
 				04D355E22A87D38B001055AF /* Button.swift */,
 			);
 			path = ReusableViews;
@@ -258,6 +261,7 @@
 				04D355CF2A80F283001055AF /* ResultLocationCell.swift in Sources */,
 				0433CAC828F387CC00495BF8 /* Extension+HomeViewController.swift in Sources */,
 				04D355DE2A867BA7001055AF /* CreateAccountViewController.swift in Sources */,
+				048030082A8A0BED00861547 /* DismissControl.swift in Sources */,
 				042F317D28F4BEC5002455E9 /* Extension+Protocol.swift in Sources */,
 				048AC36228F0D445003991A4 /* SceneDelegate.swift in Sources */,
 				048AC37828F0D714003991A4 /* HomeScreenViewController.swift in Sources */,

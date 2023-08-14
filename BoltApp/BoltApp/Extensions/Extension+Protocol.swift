@@ -15,3 +15,4 @@ import CoreLocation
 protocol ResultLocationDelegate {
     func searchViewController(_ vc: ResultLocationViewController, didSelectLocation location: Location)
 }
+

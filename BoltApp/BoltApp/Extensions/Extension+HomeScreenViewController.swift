@@ -17,26 +17,31 @@ extension HomeScreenViewController {
             ])
         }
     
+    @objc func dismissSidebar() {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.customSidebar.frame.origin.x = CGFloat(-self.sidebarWidth)
+            }) { (completed) in
+                self.customSidebar.removeFromSuperview()
+            }
+
+            isSidebarVisible = false
+    }
+
+    
     @objc func showSidebarButtonTapped() {
         if !isSidebarVisible {
-            sidebarView.frame = CGRect(x: -300, y: 0, width: 300, height: view.frame.height)
-            view.addSubview(sidebarView)
-            
+            customSidebar.frame = CGRect(x: -300, y: 0, width: 300, height: view.frame.height)
+            view.addSubview(customSidebar)
+
             UIView.animate(withDuration: 0.3) {
-                self.sidebarView.frame.origin.x = 0
+                self.customSidebar.frame.origin.x = 0
             }
-            
+
             isSidebarVisible = true
-        } else {
-            UIView.animate(withDuration: 0.3) {
-                self.sidebarView.frame.origin.x = -300
-            } completion: { _ in
-                self.sidebarView.removeFromSuperview()
-            }
-            
-            isSidebarVisible = false
         }
-        
+        if let dismissControl = customSidebar.subviews.first(where: { $0 is DismissControl }) {
+                   customSidebar.bringSubviewToFront(dismissControl)
+               }
     }
     
 }
