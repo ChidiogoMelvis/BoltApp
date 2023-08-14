@@ -16,7 +16,11 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
     
     let panel = FloatingPanelController()
     
-    let sideBarButton = Button(image: UIImage(systemName: "text.justify"), label: "", btnColor: .clear, backgroundColor: .clear, radius: 0, imageColor: .black)
+    let sidebarView = SidebarView()
+    
+    var isSidebarVisible = false
+    
+    let sideBarButton = Button(image: UIImage(systemName: "text.justify"), label: "", btnTitleColor: .clear, backgroundColor: .clear, radius: 0, imageColor: .black)
     
     lazy var mapView: MKMapView = {
         let mapView = MKMapView()
@@ -30,18 +34,23 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
         view.backgroundColor = .white
         mapView.showsUserLocation = true
         view.addSubview(mapView)
-        
-        let resultVC = ResultLocationViewController()
-        resultVC.delegate = self
-        
-        panel.set(contentViewController: resultVC) 
-        panel.addPanel(toParent: self)
+        setupResultVC()
+        tapSidebarBack()
+        sideBarButton.addTarget(self, action: #selector(showSidebarButtonTapped), for: .touchUpInside)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         mapView.frame = view.bounds
         mapView.frame = CGRect(x: 0, y: 100, width: view.bounds.width, height: view.bounds.height)
+    }
+    
+    func setupResultVC() {
+        let resultVC = ResultLocationViewController()
+        resultVC.delegate = self
+        
+        panel.set(contentViewController: resultVC)
+        panel.addPanel(toParent: self)
     }
     
     func searchViewController(_ vc: ResultLocationViewController, didSelectLocation location: Location) {
@@ -65,6 +74,11 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
             sideBarButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 70),
             sideBarButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14)
         ])
+    }
+    
+    func tapSidebarBack() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+               view.addGestureRecognizer(tapGestureRecognizer)
     }
     
 }

@@ -10,12 +10,12 @@ import UIKit
 
 class Button: UIButton {
     
-    init(image: UIImage?,label: String, btnColor: UIColor, backgroundColor: UIColor, radius: CGFloat, imageColor: UIColor) {
+    init(image: UIImage?,label: String, btnTitleColor: UIColor, backgroundColor: UIColor, radius: CGFloat, imageColor: UIColor) {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
         self.setImage(image, for: .normal)
         self.setTitle(label, for: .normal)
-        self.setTitleColor(btnColor, for: .normal)
+        self.setTitleColor(btnTitleColor, for: .normal)
         self.backgroundColor = backgroundColor
         self.layer.cornerRadius = radius
         self.tintColor = imageColor

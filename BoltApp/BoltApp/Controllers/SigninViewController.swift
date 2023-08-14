@@ -12,9 +12,9 @@ class SigninViewController: UIViewController {
     let emailTextField = TextField(placeholder: "email", isSecureTextEntry: false)
     let passwordTextField = TextField(placeholder: "password", isSecureTextEntry: true)
     
-    let signupButton = Button(image: UIImage(named: ""), label: "Continue", btnColor: .white, backgroundColor: #colorLiteral(red: 0.2039215686, green: 0.8196078431, blue: 0.5254901961, alpha: 1), radius: 30, imageColor: .clear)
+    let signupButton = Button(image: UIImage(named: ""), label: "Continue", btnTitleColor: .white, backgroundColor: #colorLiteral(red: 0.2039215686, green: 0.8196078431, blue: 0.5254901961, alpha: 1), radius: 30, imageColor: .clear)
     
-    let createAccountButton = Button(image: UIImage(named: ""), label: "Create Account ?", btnColor: #colorLiteral(red: 0.2039215686, green: 0.8196078431, blue: 0.5254901961, alpha: 1), backgroundColor: .clear, radius: 0, imageColor: .clear)
+    let createAccountButton = Button(image: UIImage(named: ""), label: "Create Account ?", btnTitleColor: #colorLiteral(red: 0.2039215686, green: 0.8196078431, blue: 0.5254901961, alpha: 1), backgroundColor: .clear, radius: 0, imageColor: .clear)
     
     override func viewDidLoad() {
         super.viewDidLoad()
