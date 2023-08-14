@@ -12,7 +12,6 @@ class TextField: UITextField {
             super.init(frame: .zero)
             leftView = UIView(frame: CGRect(x: 0, y: 0, width: 35, height: self.frame.height))
             leftViewMode = .always
-        //tintColor = .black
             translatesAutoresizingMaskIntoConstraints = false
             layer.borderWidth = 1
             font = UIFont(name: "", size: 18)
@@ -24,7 +23,6 @@ class TextField: UITextField {
         autocorrectionType = .no
         self.placeholder = placeholder
         self.isSecureTextEntry = isSecureTextEntry
-        //self.placeholder = placeholder
             attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray5])
         }
         

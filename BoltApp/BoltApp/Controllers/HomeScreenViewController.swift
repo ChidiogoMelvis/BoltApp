@@ -20,7 +20,7 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
     
     let sidebarWidth: CGFloat = 250
     
-    let sideBarButton = Button(image: UIImage(systemName: "line.3.horizontal"), label: "", btnTitleColor: .clear, backgroundColor: .clear, radius: 0, imageColor: .black)
+    let sideBarButton = Button(image: UIImage(named: "sibebaricon"), label: "", btnTitleColor: .clear, backgroundColor: .clear, radius: 0, imageColor: .black)
     
     lazy var mapView: MKMapView = {
         let mapView = MKMapView()
@@ -41,7 +41,7 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         mapView.frame = view.bounds
-        mapView.frame = CGRect(x: 0, y: 100, width: view.bounds.width, height: view.bounds.height)
+        mapView.frame = CGRect(x: 0, y: 120, width: view.bounds.width, height: view.bounds.height)
     }
     
     func setupMapView() {

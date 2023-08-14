@@ -13,7 +13,7 @@ extension HomeScreenViewController {
             view.addSubview(sideBarButton)
             NSLayoutConstraint.activate([
                 sideBarButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 70),
-                sideBarButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14)
+                sideBarButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8)
             ])
         }
     
