@@ -88,7 +88,7 @@ class ResultLocationViewController: UIViewController, UITextFieldDelegate {
             textField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             textField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             textField.heightAnchor.constraint(equalToConstant: 45),
-            textField.widthAnchor.constraint(equalToConstant: 350),
+            //textField.widthAnchor.constraint(equalToConstant: 300),
             
             tableview.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 5),
             tableview.leadingAnchor.constraint(equalTo: view.leadingAnchor),

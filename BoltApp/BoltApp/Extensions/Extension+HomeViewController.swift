@@ -27,6 +27,8 @@ extension ResultLocationViewController: UITableViewDataSource, UITableViewDelega
         tableView.deselectRow(at: indexPath, animated: true)
         let selectedLocation = locations[indexPath.row]
         delegate?.searchViewController(self, didSelectLocation: selectedLocation)
+        print("Delegate method called")
     }
+
     
 }

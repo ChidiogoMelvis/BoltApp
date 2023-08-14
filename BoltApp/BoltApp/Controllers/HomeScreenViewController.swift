@@ -12,7 +12,7 @@ import CoreLocation
 
 class HomeScreenViewController: UIViewController, ResultLocationDelegate {
     
-    let locations = [Location]()
+    //let locations = [Location]()
     
     let panel = FloatingPanelController()
     
@@ -24,7 +24,8 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
     
     lazy var mapView: MKMapView = {
         let mapView = MKMapView()
-        mapView.overrideUserInterfaceStyle = .dark
+        mapView.translatesAutoresizingMaskIntoConstraints = false
+        mapView.overrideUserInterfaceStyle = .light
         return mapView
     }()
     
@@ -35,7 +36,6 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
         mapView.showsUserLocation = true
         view.addSubview(mapView)
         setupResultVC()
-        tapSidebarBack()
         sideBarButton.addTarget(self, action: #selector(showSidebarButtonTapped), for: .touchUpInside)
     }
     
@@ -47,10 +47,10 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
     
     func setupResultVC() {
         let resultVC = ResultLocationViewController()
-        resultVC.delegate = self
-        
-        panel.set(contentViewController: resultVC)
-        panel.addPanel(toParent: self)
+            resultVC.delegate = self
+            
+            panel.set(contentViewController: resultVC)
+            panel.addPanel(toParent: self)
     }
     
     func searchViewController(_ vc: ResultLocationViewController, didSelectLocation location: Location) {
@@ -67,18 +67,6 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
             mapView.setRegion(MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
         }
     }
-    
-    func setupButton() {
-        view.addSubview(sideBarButton)
-        NSLayoutConstraint.activate([
-            sideBarButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 70),
-            sideBarButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14)
-        ])
-    }
-    
-    func tapSidebarBack() {
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
-               view.addGestureRecognizer(tapGestureRecognizer)
-    }
-    
+
+   
 }
