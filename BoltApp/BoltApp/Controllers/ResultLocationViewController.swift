@@ -52,7 +52,7 @@ class ResultLocationViewController: UIViewController, UITextFieldDelegate {
         table.delegate = self
         table.backgroundColor = .gray
         table.translatesAutoresizingMaskIntoConstraints = false
-        table.register(Cell.self, forCellReuseIdentifier: "Cell")
+        table.register(ResultLocationCell.self, forCellReuseIdentifier: "Cell")
         
         return table
     }()

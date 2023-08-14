@@ -16,7 +16,7 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
     
     let panel = FloatingPanelController()
     
-    let sidebarView = SidebarView()
+    let sidebarView = CustomSidebar()
     
     var isSidebarVisible = false
     

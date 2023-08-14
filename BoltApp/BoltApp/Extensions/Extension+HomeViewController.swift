@@ -16,7 +16,7 @@ extension ResultLocationViewController: UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! Cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ResultLocationCell
         cell.textLabel?.text = locations[indexPath.row].name
         cell.contentView.backgroundColor = .secondarySystemBackground
         cell.backgroundColor = .secondarySystemBackground

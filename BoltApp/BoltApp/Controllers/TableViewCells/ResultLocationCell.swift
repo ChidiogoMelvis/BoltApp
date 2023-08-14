@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Cell: UITableViewCell {
+class ResultLocationCell: UITableViewCell {
     
     let identifier = "Cell"
 
