@@ -15,6 +15,10 @@ extension CustomSidebar {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SidebarCell", for: indexPath) as! SidebarCell
+        cell.profileImage.image = UIImage(systemName: "person.crop.circle")
+        cell.profileName.text = "Emelano"
+        cell.viewProfileLabel.text = "View profile"
+        cell.viewProfileLabel.font = UIFont.systemFont(ofSize: 12)
         return cell
     }
     
@@ -22,9 +26,9 @@ extension CustomSidebar {
         return 70
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Emenalo"
-    }
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return "Emenalo"
+//    }
 
     
     

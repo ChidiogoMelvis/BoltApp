@@ -17,7 +17,7 @@ extension HomeScreenViewController {
         ])
     }
     
-    @objc func setupDismissControl() {
+    func setupDismissControl() {
         sideBarButton.addTarget(self, action: #selector(showSidebarButtonTapped), for: .touchUpInside)
         let topDismissControl = TopDismissControl()
         topDismissControl.addTarget(self, action: #selector(dismissSidebar), for: .touchUpInside)

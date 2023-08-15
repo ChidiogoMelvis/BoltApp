@@ -15,6 +15,8 @@
 		04802FFF2A89BAAE00861547 /* SidebarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04802FFE2A89BAAE00861547 /* SidebarCell.swift */; };
 		048030022A89BB2800861547 /* Extension+CustomSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048030012A89BB2800861547 /* Extension+CustomSidebar.swift */; };
 		048030082A8A0BED00861547 /* DismissControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048030072A8A0BED00861547 /* DismissControl.swift */; };
+		0480300A2A8B0E3700861547 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048030092A8B0E3700861547 /* Label.swift */; };
+		0480300C2A8B0E9000861547 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480300B2A8B0E9000861547 /* ImageView.swift */; };
 		048AC36028F0D445003991A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC35F28F0D445003991A4 /* AppDelegate.swift */; };
 		048AC36228F0D445003991A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC36128F0D445003991A4 /* SceneDelegate.swift */; };
 		048AC36428F0D445003991A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC36328F0D445003991A4 /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 		04802FFE2A89BAAE00861547 /* SidebarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarCell.swift; sourceTree = "<group>"; };
 		048030012A89BB2800861547 /* Extension+CustomSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CustomSidebar.swift"; sourceTree = "<group>"; };
 		048030072A8A0BED00861547 /* DismissControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissControl.swift; sourceTree = "<group>"; };
+		048030092A8B0E3700861547 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		0480300B2A8B0E9000861547 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		048AC35C28F0D445003991A4 /* BoltApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoltApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048AC35F28F0D445003991A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		048AC36128F0D445003991A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 				04D355E02A87031B001055AF /* TextField.swift */,
 				04D355E62A88A2D6001055AF /* CustomSidebar.swift */,
 				048030072A8A0BED00861547 /* DismissControl.swift */,
+				0480300B2A8B0E9000861547 /* ImageView.swift */,
+				048030092A8B0E3700861547 /* Label.swift */,
 				04D355E22A87D38B001055AF /* Button.swift */,
 			);
 			path = ReusableViews;
@@ -258,12 +264,14 @@
 				0433CAC528F3344A00495BF8 /* Model.swift in Sources */,
 				04D355E32A87D38B001055AF /* Button.swift in Sources */,
 				048030022A89BB2800861547 /* Extension+CustomSidebar.swift in Sources */,
+				0480300C2A8B0E9000861547 /* ImageView.swift in Sources */,
 				04D355CF2A80F283001055AF /* ResultLocationCell.swift in Sources */,
 				0433CAC828F387CC00495BF8 /* Extension+HomeViewController.swift in Sources */,
 				04D355DE2A867BA7001055AF /* CreateAccountViewController.swift in Sources */,
 				048030082A8A0BED00861547 /* DismissControl.swift in Sources */,
 				042F317D28F4BEC5002455E9 /* Extension+Protocol.swift in Sources */,
 				048AC36228F0D445003991A4 /* SceneDelegate.swift in Sources */,
+				0480300A2A8B0E3700861547 /* Label.swift in Sources */,
 				048AC37828F0D714003991A4 /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
