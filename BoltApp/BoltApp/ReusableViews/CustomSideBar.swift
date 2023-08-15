@@ -34,7 +34,7 @@ class CustomSidebar: UIView, UITableViewDelegate, UITableViewDataSource {
         self.addSubview(sidebarTableView)
         
         NSLayoutConstraint.activate([
-            sidebarTableView.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
+            sidebarTableView.topAnchor.constraint(equalTo: self.topAnchor, constant: 120),
             sidebarTableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 14),
             sidebarTableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14),
             sidebarTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -100)

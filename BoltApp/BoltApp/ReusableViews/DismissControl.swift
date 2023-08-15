@@ -9,7 +9,7 @@ import UIKit
 
 class TopDismissControl: UIControl {
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
-        return point.x < frame.height / 2
+        return point.x < frame.height / 6
     }
 }
 
