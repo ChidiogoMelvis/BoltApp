@@ -20,7 +20,7 @@ class CustomSidebar: UIView, UITableViewDelegate, UITableViewDataSource {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .red
+        self.backgroundColor = .white
         setupTableView()
         
     }
@@ -37,7 +37,7 @@ class CustomSidebar: UIView, UITableViewDelegate, UITableViewDataSource {
             sidebarTableView.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
             sidebarTableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 14),
             sidebarTableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14),
-            sidebarTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20)
+            sidebarTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -100)
         ])
     }
     

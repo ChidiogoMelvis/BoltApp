@@ -38,11 +38,14 @@ class ResultLocationViewController: UIViewController, UITextFieldDelegate {
         textField.placeholder = ""
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.layer.cornerRadius = 8
-        textField.backgroundColor = .systemGray5
+        textField.backgroundColor = .white
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 50))
         textField.leftViewMode = .always
         textField.delegate = self
-        
+        textField.layer.shadowColor = UIColor.darkGray.cgColor
+        textField.layer.shadowOpacity = 0.8
+        textField.layer.shadowOffset = CGSize(width: 0, height: 2)
+
         return textField
     }()
     
@@ -50,7 +53,6 @@ class ResultLocationViewController: UIViewController, UITextFieldDelegate {
         let table = UITableView()
         table.dataSource = self
         table.delegate = self
-        table.backgroundColor = .gray
         table.translatesAutoresizingMaskIntoConstraints = false
         table.register(ResultLocationCell.self, forCellReuseIdentifier: "Cell")
         

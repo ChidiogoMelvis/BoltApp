@@ -29,6 +29,5 @@ extension ResultLocationViewController: UITableViewDataSource, UITableViewDelega
         delegate?.searchViewController(self, didSelectLocation: selectedLocation)
         print("Delegate method called")
     }
-
     
 }

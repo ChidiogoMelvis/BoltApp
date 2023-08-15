@@ -20,7 +20,9 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
     
     let sidebarWidth: CGFloat = 250
     
-    let sideBarButton = Button(image: UIImage(named: "sibebaricon"), label: "", btnTitleColor: .clear, backgroundColor: .clear, radius: 0, imageColor: .black)
+    let topViewHeight: CGFloat = 100
+    
+    let sideBarButton = Button(image: UIImage(systemName: "text.justify"), label: "", btnTitleColor: .clear, backgroundColor: .clear, radius: 0, imageColor: .black)
     
     lazy var mapView: MKMapView = {
         let mapView = MKMapView()
@@ -70,14 +72,6 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
             
             mapView.setRegion(MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
         }
-    }
-    
-    func setupDismissControl() {
-        sideBarButton.addTarget(self, action: #selector(showSidebarButtonTapped), for: .touchUpInside)
-        let dismissControl = DismissControl()
-                dismissControl.addTarget(self, action: #selector(dismissSidebar), for: .touchUpInside)
-                customSidebar.addSubview(dismissControl)
-                dismissControl.frame = customSidebar.bounds
     }
     
 }
