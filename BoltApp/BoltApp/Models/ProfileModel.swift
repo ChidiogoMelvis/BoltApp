@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-struct ProfileImageModel {
-    var profileImage: UIImage
+struct ProfileImage {
+    var profileImage: UIImage?
     var profileName: String
     var viewProfile: String
 }
@@ -28,30 +28,30 @@ struct Payments {
 
 
 struct History {
-    var historyIcon: UIImage
+    var historyIcon: UIImage?
     var historyLabel: String
 }
 
 
 struct Promotions {
-    var promotionsIcon: UIImage
+    var promotionsIcon: UIImage?
     var promotionsLabel: String
 }
 
 
 struct Support {
-    var supportIcon: UIImage
+    var supportIcon: UIImage?
     var supportLabel: String
 }
 
 
 struct About {
-    var supportIcon: UIImage
-    var supportLabel: String
+    var aboutIcon: UIImage?
+    var aboutLabel: String
 }
 
 
 struct WorkRides {
-    var workRidesIcon: UIImage
+    var workRidesIcon: UIImage?
     var workRidesLabel: String
 }
