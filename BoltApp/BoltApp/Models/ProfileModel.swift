@@ -6,16 +6,52 @@
 //
 
 import Foundation
+import UIKit
 
-struct ProfileModel {
-    var profileImage: String
+struct ProfileImageModel {
+    var profileImage: UIImage
     var profileName: String
     var viewProfile: String
-    var journey: String
-    var payments: Int
-    var history: String
-    var promotions: String
-    var support: String
-    var about: String
-    var workRides: String
+}
+
+
+struct Journey {
+    var journeyIcon: UIImage?
+    var journeyLabel: String
+}
+
+
+struct Payments {
+    var paymentsIcon: UIImage?
+    var paymentsLabel: String
+}
+
+
+struct History {
+    var historyIcon: UIImage
+    var historyLabel: String
+}
+
+
+struct Promotions {
+    var promotionsIcon: UIImage
+    var promotionsLabel: String
+}
+
+
+struct Support {
+    var supportIcon: UIImage
+    var supportLabel: String
+}
+
+
+struct About {
+    var supportIcon: UIImage
+    var supportLabel: String
+}
+
+
+struct WorkRides {
+    var workRidesIcon: UIImage
+    var workRidesLabel: String
 }

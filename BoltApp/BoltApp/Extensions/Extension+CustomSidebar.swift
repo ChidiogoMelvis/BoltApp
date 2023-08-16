@@ -26,10 +26,4 @@ extension CustomSidebar {
         return 70
     }
     
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return "Emenalo"
-//    }
-
-    
-    
 }
