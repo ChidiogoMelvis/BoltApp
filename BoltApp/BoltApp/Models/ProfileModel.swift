@@ -55,3 +55,37 @@ struct WorkRides {
     var workRidesIcon: UIImage?
     var workRidesLabel: String
 }
+
+var profileImageArray = [
+   ProfileImage(profileImage: UIImage(named: "profileImage"), profileName: "Emelano", viewProfile: "View profile")
+]
+
+var journeyArray = [
+   Journey(journeyIcon: UIImage(named: "freeJourney"), journeyLabel: "Free journeys")
+]
+
+var  paymentsArray = [
+   Payments(paymentsIcon: UIImage(named: "payments"), paymentsLabel: "Payments")
+]
+
+var historyArray = [
+   History(historyIcon: UIImage(named: "history"), historyLabel: "History")
+]
+
+var  promotionsArray = [
+   Promotions(promotionsIcon: UIImage(named: "promotions"), promotionsLabel: "Promotions")
+]
+
+var supportArrat = [
+   Support(supportIcon: UIImage(named: "support"), supportLabel: "Support")
+]
+
+var aboutArray = [
+     About(aboutIcon: UIImage(named: "about"), aboutLabel: "About")
+
+]
+
+var workRidesArray = [
+    WorkRides(workRidesIcon: UIImage(named: "workRides"), workRidesLabel: "Work Rides")
+]
+
