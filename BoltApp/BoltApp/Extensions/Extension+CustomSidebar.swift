@@ -15,7 +15,7 @@ extension CustomSidebar {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SidebarCell", for: indexPath) as! SidebarCell
-        cell.profileImage.image = UIImage(systemName: "person.crop.circle")
+        cell.profileImage.image = UIImage(named: "profileImage")
         cell.profileName.text = "Emelano"
         cell.viewProfileLabel.text = "View profile"
         cell.viewProfileLabel.font = UIFont.systemFont(ofSize: 12)

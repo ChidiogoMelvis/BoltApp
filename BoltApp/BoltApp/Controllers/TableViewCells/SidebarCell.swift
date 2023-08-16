@@ -20,7 +20,7 @@ class SidebarCell: UITableViewCell {
         let stack = UIStackView(arrangedSubviews: [profileName, viewProfileLabel])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
-        stack.spacing = 0
+        stack.spacing = 1
         stack.alignment = .leading
         return stack
     }()
@@ -29,7 +29,7 @@ class SidebarCell: UITableViewCell {
         let stack = UIStackView(arrangedSubviews: [profileImage, nameLabelStackView])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
-        stack.spacing = 0
+        stack.spacing = 2
         stack.alignment = .fill
         return stack
     }()
