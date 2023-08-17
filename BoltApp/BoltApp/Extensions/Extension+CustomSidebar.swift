@@ -26,4 +26,8 @@ extension CustomSidebar {
         return 70
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
 }
