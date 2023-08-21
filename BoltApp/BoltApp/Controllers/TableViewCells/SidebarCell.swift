@@ -42,7 +42,7 @@ class SidebarCell: UITableViewCell {
         let stack = UIStackView(arrangedSubviews: [freeJourneysIcon, freeJourneysLabel])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
-        stack.spacing = 5
+        stack.spacing = 20
         stack.alignment = .firstBaseline
         return stack
     }()
@@ -55,7 +55,7 @@ class SidebarCell: UITableViewCell {
         let stack = UIStackView(arrangedSubviews: [paymentsIcon, paymentsLabel])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
-        stack.spacing = 5
+        stack.spacing = 20
         stack.alignment = .fill
         return stack
     }()
@@ -68,7 +68,7 @@ class SidebarCell: UITableViewCell {
         let stack = UIStackView(arrangedSubviews: [historyIcon, historyLabel])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
-        stack.spacing = 5
+        stack.spacing = 20
         stack.alignment = .fill
         return stack
     }()
@@ -81,7 +81,7 @@ class SidebarCell: UITableViewCell {
         let stack = UIStackView(arrangedSubviews: [promotionsIcon, promotionsLabel])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
-        stack.spacing = 5
+        stack.spacing = 20
         stack.alignment = .fill
         return stack
     }()
@@ -94,7 +94,7 @@ class SidebarCell: UITableViewCell {
         let stack = UIStackView(arrangedSubviews: [supportIcon, supportLabel])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
-        stack.spacing = 5
+        stack.spacing = 20
         stack.alignment = .fill
         return stack
     }()
@@ -107,7 +107,7 @@ class SidebarCell: UITableViewCell {
         let stack = UIStackView(arrangedSubviews: [aboutIcon, aboutLabel])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
-        stack.spacing = 5
+        stack.spacing = 20
         stack.alignment = .fill
         return stack
     }()
@@ -120,7 +120,7 @@ class SidebarCell: UITableViewCell {
         let stack = UIStackView(arrangedSubviews: [workRidesIcon, workRidesLabel])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
-        stack.spacing = 5
+        stack.spacing = 20
         stack.alignment = .fill
         return stack
     }()
@@ -146,35 +146,35 @@ class SidebarCell: UITableViewCell {
         NSLayoutConstraint.activate([
             profileStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
             profileStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-            profileStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
+//            profileStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
             
             freeJourneysStackView.topAnchor.constraint(equalTo: profileStackView.bottomAnchor, constant: 20),
             freeJourneysStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-            freeJourneysStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
+//            freeJourneysStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
             
             paymentsStackView.topAnchor.constraint(equalTo: freeJourneysStackView.bottomAnchor, constant: 20),
             paymentsStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-            paymentsStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
+//            paymentsStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
             
             historyStackView.topAnchor.constraint(equalTo: paymentsStackView.bottomAnchor, constant: 20),
             historyStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-            historyStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
+//            historyStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
             
             promotionsStackView.topAnchor.constraint(equalTo: historyStackView.bottomAnchor, constant: 20),
             promotionsStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-            promotionsStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
+//            promotionsStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
             
             supportStackView.topAnchor.constraint(equalTo: promotionsStackView.bottomAnchor, constant: 20),
             supportStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-            supportStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
+//            supportStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
             
             aboutStackView.topAnchor.constraint(equalTo: supportStackView.bottomAnchor, constant: 20),
             aboutStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-            aboutStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
+//            aboutStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
             
             workRidesStackView.topAnchor.constraint(equalTo: aboutStackView.bottomAnchor, constant: 20),
             workRidesStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-            workRidesStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
+//            workRidesStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
         ])
     }
 

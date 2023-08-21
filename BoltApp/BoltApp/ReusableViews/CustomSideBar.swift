@@ -20,16 +20,19 @@ class CustomSidebar: UIView, UITableViewDelegate, UITableViewDataSource {
     
     let signuDriveButton = Button(image: UIImage(systemName: ""), label: "SIGN UP TO DRIVE", btnTitleColor: .white, backgroundColor: #colorLiteral(red: 0.2039215686, green: 0.8196078431, blue: 0.5254901961, alpha: 1), radius: 25, imageColor: .clear)
     
-    var tableData: [SidebarItem] = [
-        profileImageItem,
-        journeyItem,
-        paymentsItem,
-        historyItem,
-        promotionsItem,
-        supportItem,
-        aboutItem,
-        workRidesItem
-    ]
+
+    var tableData: [SidebarItem] = [profileImageItem,
+                                    journeyItem,
+                                    paymentsItem,
+                                    historyItem,
+                                    promotionsItem,
+                                    supportItem,
+                                    aboutItem,
+                                    workRidesItem] {
+        didSet {
+            sidebarTableView.reloadData()
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
