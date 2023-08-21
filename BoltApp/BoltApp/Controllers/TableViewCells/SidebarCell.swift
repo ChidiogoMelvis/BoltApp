@@ -124,13 +124,7 @@ class SidebarCell: UITableViewCell {
         stack.alignment = .fill
         return stack
     }()
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setupViews()
-        // Initialization code
-    }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         setupViews()
@@ -144,37 +138,29 @@ class SidebarCell: UITableViewCell {
         }
         
         NSLayoutConstraint.activate([
-            profileStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
+            profileStackView.topAnchor.constraint(equalTo: self.topAnchor),
             profileStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-//            profileStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
             
-            freeJourneysStackView.topAnchor.constraint(equalTo: profileStackView.bottomAnchor, constant: 20),
+            freeJourneysStackView.topAnchor.constraint(equalTo: profileStackView.bottomAnchor, constant: 0),
             freeJourneysStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-//            freeJourneysStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
             
-            paymentsStackView.topAnchor.constraint(equalTo: freeJourneysStackView.bottomAnchor, constant: 20),
+            paymentsStackView.topAnchor.constraint(equalTo: freeJourneysStackView.bottomAnchor, constant: 0),
             paymentsStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-//            paymentsStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
             
-            historyStackView.topAnchor.constraint(equalTo: paymentsStackView.bottomAnchor, constant: 20),
+            historyStackView.topAnchor.constraint(equalTo: paymentsStackView.bottomAnchor, constant: 0),
             historyStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-//            historyStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
             
-            promotionsStackView.topAnchor.constraint(equalTo: historyStackView.bottomAnchor, constant: 20),
+            promotionsStackView.topAnchor.constraint(equalTo: historyStackView.bottomAnchor, constant: 0),
             promotionsStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-//            promotionsStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
             
-            supportStackView.topAnchor.constraint(equalTo: promotionsStackView.bottomAnchor, constant: 20),
+            supportStackView.topAnchor.constraint(equalTo: promotionsStackView.bottomAnchor, constant: 0),
             supportStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-//            supportStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
             
-            aboutStackView.topAnchor.constraint(equalTo: supportStackView.bottomAnchor, constant: 20),
+            aboutStackView.topAnchor.constraint(equalTo: supportStackView.bottomAnchor, constant: 0),
             aboutStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-//            aboutStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
             
-            workRidesStackView.topAnchor.constraint(equalTo: aboutStackView.bottomAnchor, constant: 20),
+            workRidesStackView.topAnchor.constraint(equalTo: aboutStackView.bottomAnchor, constant: 0),
             workRidesStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-//            workRidesStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
         ])
     }
 
