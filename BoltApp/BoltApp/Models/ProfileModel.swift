@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+
 struct ProfileImage {
     var profileImage: UIImage?
     var profileName: String
@@ -56,36 +57,30 @@ struct WorkRides {
     var workRidesLabel: String
 }
 
-var profileImageArray = [
-   ProfileImage(profileImage: UIImage(named: "profileImage"), profileName: "Emelano", viewProfile: "View profile")
-]
+struct SidebarItem {
+    enum ItemType {
+        case profileImage(ProfileImage)
+        case journey(Journey)
+        case payments(Payments)
+       case  history(History)
+        case promotions(Promotions)
+        case support(Support)
+        case about(About)
+        case workRides(WorkRides)
+    }
 
-var journeyArray = [
-   Journey(journeyIcon: UIImage(named: "freeJourney"), journeyLabel: "Free journeys")
-]
+    let type: ItemType
+}
 
-var  paymentsArray = [
-   Payments(paymentsIcon: UIImage(named: "payments"), paymentsLabel: "Payments")
-]
+let profileImageItem = SidebarItem(type: .profileImage(ProfileImage(profileImage: UIImage(named: "profileImage"), profileName: "Emelano", viewProfile: "View profile")))
+let journeyItem = SidebarItem(type: .journey(Journey(journeyIcon: UIImage(named: "freeJourney"), journeyLabel: "Free journeys")))
+let paymentsItem = SidebarItem(type: .payments(Payments(paymentsIcon: UIImage(named: "payments"), paymentsLabel: "Payments")))
 
-var historyArray = [
-   History(historyIcon: UIImage(named: "history"), historyLabel: "History")
-]
+let historyItem = SidebarItem(type: .history(History(historyIcon: UIImage(named: "history"),historyLabel: "History")))
+let promotionsItem = SidebarItem(type: .promotions(Promotions(promotionsIcon: UIImage(named: "promotions") ,promotionsLabel: "promotions")))
+let supportItem = SidebarItem(type: .support(Support(supportIcon: UIImage(named: "support") ,supportLabel: "support")))
 
-var  promotionsArray = [
-   Promotions(promotionsIcon: UIImage(named: "promotions"), promotionsLabel: "Promotions")
-]
+let aboutItem = SidebarItem(type: .about(About(aboutIcon: UIImage(named: "about") ,aboutLabel: "About")))
 
-var supportArrat = [
-   Support(supportIcon: UIImage(named: "support"), supportLabel: "Support")
-]
-
-var aboutArray = [
-     About(aboutIcon: UIImage(named: "about"), aboutLabel: "About")
-
-]
-
-var workRidesArray = [
-    WorkRides(workRidesIcon: UIImage(named: "workRides"), workRidesLabel: "Work Rides")
-]
+let workRidesItem = SidebarItem(type: .workRides(WorkRides(workRidesIcon: UIImage(named: "workRides") ,workRidesLabel: "Work Rides")))
 
