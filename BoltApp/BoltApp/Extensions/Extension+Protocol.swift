@@ -16,3 +16,6 @@ protocol ResultLocationDelegate {
     func searchViewController(_ vc: ResultLocationViewController, didSelectLocation location: Location)
 }
 
+//protocol ResultLocationDelegate: AnyObject {
+//    func resultLocationViewController(_ viewController: ResultLocationViewController, didSelectLocation location: Location)
+//}

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SidebarCell: UITableViewCell {
+class SidebarCell: UITableViewCell, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let profileImage = ProfileImageView(image: UIImage(systemName: ""))
     
@@ -128,6 +128,9 @@ class SidebarCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         setupViews()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleImageTap))
+        profileImage.addGestureRecognizer(tapGesture)
+        profileImage.isUserInteractionEnabled = true
         
     }
     
@@ -143,7 +146,7 @@ class SidebarCell: UITableViewCell {
             
             freeJourneysStackView.topAnchor.constraint(equalTo: profileStackView.bottomAnchor, constant: 0),
             freeJourneysStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-           
+            
             paymentsStackView.topAnchor.constraint(equalTo: freeJourneysStackView.bottomAnchor, constant: 0),
             paymentsStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
             
@@ -155,7 +158,7 @@ class SidebarCell: UITableViewCell {
             
             supportStackView.topAnchor.constraint(equalTo: promotionsStackView.bottomAnchor, constant: 0),
             supportStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-        
+            
             aboutStackView.topAnchor.constraint(equalTo: supportStackView.bottomAnchor, constant: 0),
             aboutStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
             
@@ -163,5 +166,11 @@ class SidebarCell: UITableViewCell {
             workRidesStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
         ])
     }
-
+    
+    @objc private func handleImageTap() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+    }
+    
 }

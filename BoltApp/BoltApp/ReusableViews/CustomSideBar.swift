@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomSidebar: UIView, UITableViewDelegate, UITableViewDataSource {
+class CustomSidebar: UIView, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     lazy var sidebarTableView: UITableView = {
         let tableView = UITableView()
@@ -40,6 +40,14 @@ class CustomSidebar: UIView, UITableViewDelegate, UITableViewDataSource {
         setupTableView()
         
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        if let cell = picker.delegate as? SidebarCell, let pickedImage = info[.originalImage] as? UIImage {
+            cell.profileImage.image = pickedImage
+        }
+    }
+
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)

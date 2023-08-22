@@ -20,30 +20,30 @@ class LocationManager: NSObject {
                 completion(.success([]))
                 return
             }
-            
+
             let models: [Location] = places.compactMap { place in
                 var nameComponents: [String] = []
-                
+
                 if let locationName = place.name {
                     nameComponents.append(locationName)
                 }
-                
+
                 if let region = place.administrativeArea {
                     nameComponents.append(region)
                 }
-                
+
                 if let locality = place.locality {
                     nameComponents.append(locality)
                 }
-                
+
                 if let country = place.country {
                     nameComponents.append(country)
                 }
-                
+
                 let combinedName = nameComponents.joined(separator: ", ")
                 print("\n\(place)\n\n")
-                
-                let result = Location(name: combinedName, coordinates: place.location?.coordinate)
+
+                let result = Location(name: combinedName, administrativeArea: place.administrativeArea ?? "", coordinates: place.location?.coordinate)
                 return result
             }
             completion(.success(models))
