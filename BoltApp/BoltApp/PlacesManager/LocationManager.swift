@@ -43,7 +43,7 @@ class LocationManager: NSObject {
                 let combinedName = nameComponents.joined(separator: ", ")
                 print("\n\(place)\n\n")
 
-                let result = Location(name: combinedName, administrativeArea: place.administrativeArea ?? "", coordinates: place.location?.coordinate)
+                let result = Location(name: combinedName,  coordinates: place.location?.coordinate)
                 return result
             }
             completion(.success(models))
@@ -51,3 +51,4 @@ class LocationManager: NSObject {
     }
 
 }
+//place.administrativeArea ?? ""

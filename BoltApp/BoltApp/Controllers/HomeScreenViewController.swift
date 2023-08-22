@@ -69,7 +69,7 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
             pin.coordinate = coordinates
 
             pin.title = location.name
-            pin.subtitle = location.administrativeArea
+            //pin.subtitle = location.administrativeArea
 
             mapView.addAnnotation(pin)
 

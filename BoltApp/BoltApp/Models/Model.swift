@@ -10,6 +10,6 @@ import CoreLocation
 
 struct Location {
     let name: String
-    let administrativeArea: String
+    //let administrativeArea: String
     let coordinates: CLLocationCoordinate2D?
 }
