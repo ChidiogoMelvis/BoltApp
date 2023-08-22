@@ -43,7 +43,7 @@ class SidebarCell: UITableViewCell {
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
         stack.spacing = 20
-        stack.alignment = .firstBaseline
+        stack.alignment = .leading
         return stack
     }()
     
@@ -56,7 +56,7 @@ class SidebarCell: UITableViewCell {
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
         stack.spacing = 20
-        stack.alignment = .fill
+        stack.alignment = .leading
         return stack
     }()
     
@@ -69,7 +69,7 @@ class SidebarCell: UITableViewCell {
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
         stack.spacing = 20
-        stack.alignment = .fill
+        stack.alignment = .leading
         return stack
     }()
     
@@ -82,7 +82,7 @@ class SidebarCell: UITableViewCell {
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
         stack.spacing = 20
-        stack.alignment = .fill
+        stack.alignment = .leading
         return stack
     }()
     
@@ -95,7 +95,7 @@ class SidebarCell: UITableViewCell {
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
         stack.spacing = 20
-        stack.alignment = .fill
+        stack.alignment = .leading
         return stack
     }()
     
@@ -108,7 +108,7 @@ class SidebarCell: UITableViewCell {
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
         stack.spacing = 20
-        stack.alignment = .fill
+        stack.alignment = .leading
         return stack
     }()
     
@@ -121,14 +121,14 @@ class SidebarCell: UITableViewCell {
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
         stack.spacing = 20
-        stack.alignment = .fill
+        stack.alignment = .leading
         return stack
     }()
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         setupViews()
-        // Configure the view for the selected state
+        
     }
     
     func setupViews() {

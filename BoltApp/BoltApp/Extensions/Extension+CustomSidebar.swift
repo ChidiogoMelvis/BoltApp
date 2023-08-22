@@ -48,9 +48,9 @@ extension CustomSidebar {
            return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 55
+//    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
