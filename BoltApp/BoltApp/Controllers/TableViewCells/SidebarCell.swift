@@ -143,7 +143,7 @@ class SidebarCell: UITableViewCell {
             
             freeJourneysStackView.topAnchor.constraint(equalTo: profileStackView.bottomAnchor, constant: 0),
             freeJourneysStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-            
+           
             paymentsStackView.topAnchor.constraint(equalTo: freeJourneysStackView.bottomAnchor, constant: 0),
             paymentsStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
             
@@ -155,7 +155,7 @@ class SidebarCell: UITableViewCell {
             
             supportStackView.topAnchor.constraint(equalTo: promotionsStackView.bottomAnchor, constant: 0),
             supportStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-            
+        
             aboutStackView.topAnchor.constraint(equalTo: supportStackView.bottomAnchor, constant: 0),
             aboutStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
             

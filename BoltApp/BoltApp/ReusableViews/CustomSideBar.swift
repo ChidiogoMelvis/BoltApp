@@ -14,7 +14,7 @@ class CustomSidebar: UIView, UITableViewDelegate, UITableViewDataSource {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
-//        tableView.separatorInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+        tableView.separatorInset = .zero
         tableView.register(SidebarCell.self, forCellReuseIdentifier: "SidebarCell")
         return tableView
     }()

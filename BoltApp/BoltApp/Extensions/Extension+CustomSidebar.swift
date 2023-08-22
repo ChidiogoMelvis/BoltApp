@@ -16,8 +16,7 @@ extension CustomSidebar {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SidebarCell", for: indexPath) as! SidebarCell
         let item = tableData[indexPath.row]
-           
-           switch item.type {
+        switch item.type {
            case .profileImage(let profileItem):
                cell.profileImage.image = profileItem.profileImage
                cell.profileName.text = profileItem.profileName
@@ -48,12 +47,8 @@ extension CustomSidebar {
            return cell
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 55
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
 //    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
     
 }
