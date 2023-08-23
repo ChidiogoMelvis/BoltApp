@@ -7,18 +7,20 @@
 
 import UIKit
 
-class CustomSidebar: UIView, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CustomSidebar: UIView, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    lazy var sidebarTableView: UITableView = {
-        let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.separatorInset = .zero
-        tableView.register(SidebarCell.self, forCellReuseIdentifier: "SidebarCell")
-        return tableView
+    lazy var sidebarCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = 2
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.collectionViewLayout = layout
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(SidebarCollectionViewCell.self, forCellWithReuseIdentifier: "SidebarCollectionViewCell")
+        return collectionView
     }()
-    
 
     var tableData: [SidebarItem] = [profileImageItem,
                                     journeyItem,
@@ -29,25 +31,17 @@ class CustomSidebar: UIView, UITableViewDelegate, UITableViewDataSource, UIImage
                                     aboutItem,
                                     workRidesItem] {
         didSet {
-            sidebarTableView.reloadData()
+            sidebarCollectionView.reloadData()
         }
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        sidebarTableView.separatorStyle = .none
+        //sidebarCollectionView.separatorStyle = .singleLine
         self.backgroundColor = .white
         setupTableView()
         
     }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        picker.dismiss(animated: true, completion: nil)
-        if let cell = picker.delegate as? SidebarCell, let pickedImage = info[.originalImage] as? UIImage {
-            cell.profileImage.image = pickedImage
-        }
-    }
-
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -55,13 +49,13 @@ class CustomSidebar: UIView, UITableViewDelegate, UITableViewDataSource, UIImage
     }
     
     func setupTableView() {
-        self.addSubview(sidebarTableView)
+        self.addSubview(sidebarCollectionView)
        
         NSLayoutConstraint.activate([
-            sidebarTableView.topAnchor.constraint(equalTo: self.topAnchor, constant: 120),
-            sidebarTableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 14),
-            sidebarTableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14),
-            sidebarTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -100),
+            sidebarCollectionView.topAnchor.constraint(equalTo: self.topAnchor, constant: 120),
+            sidebarCollectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 14),
+            sidebarCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14),
+            sidebarCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -100),
         ])
     }
     

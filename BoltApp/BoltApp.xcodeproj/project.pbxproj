@@ -14,7 +14,6 @@
 		0433CAC828F387CC00495BF8 /* Extension+HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433CAC728F387CC00495BF8 /* Extension+HomeViewController.swift */; };
 		0433CACB28F38E5300495BF8 /* ResultLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433CACA28F38E5300495BF8 /* ResultLocationViewController.swift */; };
 		04802FFD2A89B68500861547 /* Extension+HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04802FFC2A89B68500861547 /* Extension+HomeScreenViewController.swift */; };
-		04802FFF2A89BAAE00861547 /* SidebarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04802FFE2A89BAAE00861547 /* SidebarCell.swift */; };
 		048030022A89BB2800861547 /* Extension+CustomSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048030012A89BB2800861547 /* Extension+CustomSidebar.swift */; };
 		048030082A8A0BED00861547 /* DismissControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048030072A8A0BED00861547 /* DismissControl.swift */; };
 		0480300A2A8B0E3700861547 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048030092A8B0E3700861547 /* Label.swift */; };
@@ -52,7 +51,6 @@
 		0433CAC728F387CC00495BF8 /* Extension+HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+HomeViewController.swift"; sourceTree = "<group>"; };
 		0433CACA28F38E5300495BF8 /* ResultLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultLocationViewController.swift; sourceTree = "<group>"; };
 		04802FFC2A89B68500861547 /* Extension+HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+HomeScreenViewController.swift"; sourceTree = "<group>"; };
-		04802FFE2A89BAAE00861547 /* SidebarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarCell.swift; sourceTree = "<group>"; };
 		048030012A89BB2800861547 /* Extension+CustomSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CustomSidebar.swift"; sourceTree = "<group>"; };
 		048030072A8A0BED00861547 /* DismissControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissControl.swift; sourceTree = "<group>"; };
 		048030092A8B0E3700861547 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				04D355CE2A80F283001055AF /* ResultLocationCell.swift */,
-				04802FFE2A89BAAE00861547 /* SidebarCell.swift */,
 				040F79772A95B8C100A1C08D /* SidebarCollectionViewCell.swift */,
 			);
 			path = TableViewCells;
@@ -301,7 +298,6 @@
 				040705932A9423BD00AA9ABA /* CustomImageView.swift in Sources */,
 				04D355E72A88A2D6001055AF /* CustomSidebar.swift in Sources */,
 				0480301E2A8DAA4800861547 /* SupportViewController.swift in Sources */,
-				04802FFF2A89BAAE00861547 /* SidebarCell.swift in Sources */,
 				048AC36428F0D445003991A4 /* ViewController.swift in Sources */,
 				048AC36028F0D445003991A4 /* AppDelegate.swift in Sources */,
 				04D355E12A87031B001055AF /* TextField.swift in Sources */,
