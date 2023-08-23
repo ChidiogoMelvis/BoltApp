@@ -9,13 +9,13 @@ import UIKit
 
 extension CustomSidebar {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tableData.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SidebarCell", for: indexPath) as! SidebarCell
-        let item = tableData[indexPath.row]
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SidebarCollectionViewCell", for: indexPath) as! SidebarCollectionViewCell
+        let item = tableData[indexPath.item]
         switch item.type {
            case .profileImage(let profileItem):
                cell.profileImage.image = profileItem.profileImage
@@ -44,7 +44,12 @@ extension CustomSidebar {
                cell.workRidesLabel.text = workRidesItem.workRidesLabel
            }
            
-           return cell
+        return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.frame.width, height: 50)
+    }
+
     
 }

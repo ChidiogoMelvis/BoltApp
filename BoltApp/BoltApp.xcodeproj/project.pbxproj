@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		040705932A9423BD00AA9ABA /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040705922A9423BD00AA9ABA /* CustomImageView.swift */; };
+		040F79782A95B8C100A1C08D /* SidebarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F79772A95B8C100A1C08D /* SidebarCollectionViewCell.swift */; };
 		042F317D28F4BEC5002455E9 /* Extension+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F317C28F4BEC5002455E9 /* Extension+Protocol.swift */; };
 		0433CAC528F3344A00495BF8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433CAC428F3344A00495BF8 /* Model.swift */; };
 		0433CAC828F387CC00495BF8 /* Extension+HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433CAC728F387CC00495BF8 /* Extension+HomeViewController.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		040705922A9423BD00AA9ABA /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		040F79772A95B8C100A1C08D /* SidebarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarCollectionViewCell.swift; sourceTree = "<group>"; };
 		042F317C28F4BEC5002455E9 /* Extension+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Protocol.swift"; sourceTree = "<group>"; };
 		0433CAC428F3344A00495BF8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		0433CAC728F387CC00495BF8 /* Extension+HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+HomeViewController.swift"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				04D355CE2A80F283001055AF /* ResultLocationCell.swift */,
 				04802FFE2A89BAAE00861547 /* SidebarCell.swift */,
+				040F79772A95B8C100A1C08D /* SidebarCollectionViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				048030182A8DAA1C00861547 /* PaymentsViewController.swift in Sources */,
 				042F317D28F4BEC5002455E9 /* Extension+Protocol.swift in Sources */,
 				048030222A8DAA6800861547 /* WorkRidesViewController.swift in Sources */,
+				040F79782A95B8C100A1C08D /* SidebarCollectionViewCell.swift in Sources */,
 				048AC36228F0D445003991A4 /* SceneDelegate.swift in Sources */,
 				048030202A8DAA5A00861547 /* AboutViewController.swift in Sources */,
 				0480300A2A8B0E3700861547 /* Label.swift in Sources */,
