@@ -10,8 +10,8 @@ import MapKit
 import FloatingPanel
 import CoreLocation
 
-class HomeScreenViewController: UIViewController, ResultLocationDelegate {
-    
+class HomeScreenViewController: UIViewController, ResultLocationDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+   
     let panel = FloatingPanelController()
     
     var customSidebar = CustomSidebar()
@@ -76,6 +76,5 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate {
             mapView.setRegion(MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
         }
     }
-    
       
 }

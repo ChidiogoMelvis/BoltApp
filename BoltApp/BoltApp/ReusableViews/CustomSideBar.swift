@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomSidebar: UIView, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class CustomSidebar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     lazy var sidebarCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -37,7 +37,6 @@ class CustomSidebar: UIView, UIImagePickerControllerDelegate, UINavigationContro
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        //sidebarCollectionView.separatorStyle = .singleLine
         self.backgroundColor = .white
         setupTableView()
         

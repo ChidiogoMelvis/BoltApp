@@ -135,13 +135,11 @@ class SidebarCollectionViewCell: UICollectionViewCell {
     }()
     
     override init(frame: CGRect) {
-            super.init(frame: frame)
-            setupViews()
-        }
-
+        super.init(frame: frame)
+        setupViews()
+    }
         required init?(coder: NSCoder) {
             super.init(coder: coder)
-            setupViews()
         }
     
     func setupViews() {
