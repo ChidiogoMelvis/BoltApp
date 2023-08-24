@@ -12,6 +12,11 @@ protocol ResultLocationDelegate {
     func searchViewController(_ vc: ResultLocationViewController, didSelectLocation location: Location)
 }
 
-protocol CustomSidebarDelegate {
-    func pressInSidebar()
+protocol SidebarCollectionViewCellDelegate: AnyObject {
+    func didSelectImage(cell: SidebarCollectionViewCell)
 }
+
+protocol SidebarViewControllerDelegate: AnyObject {
+    func sidebarDidToggleBack()
+}
+

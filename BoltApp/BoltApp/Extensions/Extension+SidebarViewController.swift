@@ -7,7 +7,29 @@
 
 import UIKit
 
-extension CustomSidebar {
+extension SidebarViewController {
+    
+    func setupViews() {
+        view.addSubview(toggleBackBtn)
+        view.addSubview(sidebarCollectionView)
+        toggleBackBtn.addTarget(self, action: #selector(toggleBackButtonTapped), for: .touchUpInside)
+        
+        NSLayoutConstraint.activate([
+            toggleBackBtn.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
+            toggleBackBtn.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),
+            
+            sidebarCollectionView.topAnchor.constraint(equalTo: toggleBackBtn.topAnchor, constant: 70),
+            sidebarCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),
+            sidebarCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
+            sidebarCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
+        ])
+    }
+    
+    @objc func toggleBackButtonTapped() {
+        delegate?.sidebarDidToggleBack()
+    }
+
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tableData.count
@@ -47,7 +69,7 @@ extension CustomSidebar {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.frame.width, height: 50)
+        return CGSize(width: view.frame.width, height: 50)
     }
     
 }

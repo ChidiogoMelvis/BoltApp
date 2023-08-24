@@ -134,13 +134,16 @@ class SidebarCollectionViewCell: UICollectionViewCell {
         return stack
     }()
     
+    var delegate: SidebarCollectionViewCellDelegate?
+     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
+        setupTapGesture()
     }
-        required init?(coder: NSCoder) {
-            super.init(coder: coder)
-        }
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
     
     func setupViews() {
         self.addSubview(parentStackView)
@@ -150,5 +153,16 @@ class SidebarCollectionViewCell: UICollectionViewCell {
             parentStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20)
         ])
     }
+    
+    func setupTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapImage))
+        profileImage.isUserInteractionEnabled = true
+        profileImage.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func didTapImage() {
+        delegate?.didSelectImage(cell: self)
+    }
+    
     
 }

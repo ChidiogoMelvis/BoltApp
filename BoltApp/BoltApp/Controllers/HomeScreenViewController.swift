@@ -10,17 +10,15 @@ import MapKit
 import FloatingPanel
 import CoreLocation
 
-class HomeScreenViewController: UIViewController, ResultLocationDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class HomeScreenViewController: UIViewController, ResultLocationDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate, SidebarViewControllerDelegate  {
    
     let panel = FloatingPanelController()
     
-    var customSidebar = CustomSidebar()
-    
-    var isSidebarVisible = false
-    
     let sidebarWidth: CGFloat = 250
     
-    let topViewHeight: CGFloat = 100
+    var sidebarShowing = false
+    
+    var sidebarViewController = SidebarViewController()
     
     let sideBarButton = Button(image: UIImage(systemName: "text.justify"), label: "", btnTitleColor: .clear, backgroundColor: .clear, radius: 0, imageColor: .black)
     
@@ -33,11 +31,10 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate, UIImag
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupButton()
+        setupViews()
         view.backgroundColor = .white
         setupMapView()
         setupResultVC()
-        setupDismissControl()
     }
     
     override func viewDidLayoutSubviews() {
@@ -76,5 +73,5 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate, UIImag
             mapView.setRegion(MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
         }
     }
-      
+    
 }

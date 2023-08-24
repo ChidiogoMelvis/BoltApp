@@ -1,13 +1,13 @@
 //
-//  CustomSideBar.swift
+//  SidebarViewController.swift
 //  BoltApp
 //
-//  Created by Mac on 13/08/2023.
+//  Created by Mac on 24/08/2023.
 //
 
 import UIKit
 
-class CustomSidebar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SidebarViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     lazy var sidebarCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -35,28 +35,15 @@ class CustomSidebar: UIView, UICollectionViewDelegate, UICollectionViewDataSourc
         }
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.backgroundColor = .white
-        setupTableView()
-        
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        
-    }
-    
-    func setupTableView() {
-        self.addSubview(sidebarCollectionView)
+    weak var delegate: SidebarViewControllerDelegate?
        
-        NSLayoutConstraint.activate([
-            sidebarCollectionView.topAnchor.constraint(equalTo: self.topAnchor, constant: 120),
-            sidebarCollectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 14),
-            sidebarCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14),
-            sidebarCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -100),
-        ])
+    let toggleBackBtn = Button(image: UIImage(systemName: "xmark"), label: "", btnTitleColor: .clear, backgroundColor: .clear, radius: 0, imageColor: .black)
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupViews()
+        view.backgroundColor = .white
+        
     }
     
 }
-

@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		040705932A9423BD00AA9ABA /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040705922A9423BD00AA9ABA /* CustomImageView.swift */; };
 		040F79782A95B8C100A1C08D /* SidebarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F79772A95B8C100A1C08D /* SidebarCollectionViewCell.swift */; };
+		040F79802A97703D00A1C08D /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F797F2A97703D00A1C08D /* SidebarViewController.swift */; };
 		042F317D28F4BEC5002455E9 /* Extension+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F317C28F4BEC5002455E9 /* Extension+Protocol.swift */; };
 		0433CAC528F3344A00495BF8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433CAC428F3344A00495BF8 /* Model.swift */; };
 		0433CAC828F387CC00495BF8 /* Extension+HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433CAC728F387CC00495BF8 /* Extension+HomeViewController.swift */; };
 		0433CACB28F38E5300495BF8 /* ResultLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433CACA28F38E5300495BF8 /* ResultLocationViewController.swift */; };
 		04802FFD2A89B68500861547 /* Extension+HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04802FFC2A89B68500861547 /* Extension+HomeScreenViewController.swift */; };
-		048030022A89BB2800861547 /* Extension+CustomSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048030012A89BB2800861547 /* Extension+CustomSidebar.swift */; };
-		048030082A8A0BED00861547 /* DismissControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048030072A8A0BED00861547 /* DismissControl.swift */; };
+		048030022A89BB2800861547 /* Extension+SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048030012A89BB2800861547 /* Extension+SidebarViewController.swift */; };
 		0480300A2A8B0E3700861547 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048030092A8B0E3700861547 /* Label.swift */; };
 		0480300C2A8B0E9000861547 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480300B2A8B0E9000861547 /* ProfileImageView.swift */; };
 		0480300E2A8C375500861547 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480300D2A8C375500861547 /* ProfileModel.swift */; };
@@ -40,19 +40,18 @@
 		04D355DE2A867BA7001055AF /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D355DD2A867BA7001055AF /* CreateAccountViewController.swift */; };
 		04D355E12A87031B001055AF /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D355E02A87031B001055AF /* TextField.swift */; };
 		04D355E32A87D38B001055AF /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D355E22A87D38B001055AF /* Button.swift */; };
-		04D355E72A88A2D6001055AF /* CustomSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D355E62A88A2D6001055AF /* CustomSidebar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		040705922A9423BD00AA9ABA /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		040F79772A95B8C100A1C08D /* SidebarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarCollectionViewCell.swift; sourceTree = "<group>"; };
+		040F797F2A97703D00A1C08D /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		042F317C28F4BEC5002455E9 /* Extension+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Protocol.swift"; sourceTree = "<group>"; };
 		0433CAC428F3344A00495BF8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		0433CAC728F387CC00495BF8 /* Extension+HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+HomeViewController.swift"; sourceTree = "<group>"; };
 		0433CACA28F38E5300495BF8 /* ResultLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultLocationViewController.swift; sourceTree = "<group>"; };
 		04802FFC2A89B68500861547 /* Extension+HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+HomeScreenViewController.swift"; sourceTree = "<group>"; };
-		048030012A89BB2800861547 /* Extension+CustomSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CustomSidebar.swift"; sourceTree = "<group>"; };
-		048030072A8A0BED00861547 /* DismissControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissControl.swift; sourceTree = "<group>"; };
+		048030012A89BB2800861547 /* Extension+SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+SidebarViewController.swift"; sourceTree = "<group>"; };
 		048030092A8B0E3700861547 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		0480300B2A8B0E9000861547 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 		0480300D2A8C375500861547 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
@@ -78,7 +77,6 @@
 		04D355DD2A867BA7001055AF /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		04D355E02A87031B001055AF /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		04D355E22A87D38B001055AF /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		04D355E62A88A2D6001055AF /* CustomSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSidebar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +105,7 @@
 			children = (
 				0433CAC728F387CC00495BF8 /* Extension+HomeViewController.swift */,
 				042F317C28F4BEC5002455E9 /* Extension+Protocol.swift */,
-				048030012A89BB2800861547 /* Extension+CustomSidebar.swift */,
+				048030012A89BB2800861547 /* Extension+SidebarViewController.swift */,
 				04802FFC2A89B68500861547 /* Extension+HomeScreenViewController.swift */,
 			);
 			path = Extensions;
@@ -175,6 +173,7 @@
 				048AC36328F0D445003991A4 /* ViewController.swift */,
 				0433CACA28F38E5300495BF8 /* ResultLocationViewController.swift */,
 				048AC37728F0D714003991A4 /* HomeScreenViewController.swift */,
+				040F797F2A97703D00A1C08D /* SidebarViewController.swift */,
 				048030122A8DA9BE00861547 /* SideBarScreens */,
 				04D355DB2A867B9A001055AF /* SigninViewController.swift */,
 				04D355DD2A867BA7001055AF /* CreateAccountViewController.swift */,
@@ -204,8 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				04D355E02A87031B001055AF /* TextField.swift */,
-				04D355E62A88A2D6001055AF /* CustomSidebar.swift */,
-				048030072A8A0BED00861547 /* DismissControl.swift */,
 				0480300B2A8B0E9000861547 /* ProfileImageView.swift */,
 				040705922A9423BD00AA9ABA /* CustomImageView.swift */,
 				048030092A8B0E3700861547 /* Label.swift */,
@@ -296,7 +293,6 @@
 				0480300E2A8C375500861547 /* ProfileModel.swift in Sources */,
 				04802FFD2A89B68500861547 /* Extension+HomeScreenViewController.swift in Sources */,
 				040705932A9423BD00AA9ABA /* CustomImageView.swift in Sources */,
-				04D355E72A88A2D6001055AF /* CustomSidebar.swift in Sources */,
 				0480301E2A8DAA4800861547 /* SupportViewController.swift in Sources */,
 				048AC36428F0D445003991A4 /* ViewController.swift in Sources */,
 				048AC36028F0D445003991A4 /* AppDelegate.swift in Sources */,
@@ -304,7 +300,7 @@
 				0433CAC528F3344A00495BF8 /* Model.swift in Sources */,
 				04D355E32A87D38B001055AF /* Button.swift in Sources */,
 				0480301C2A8DAA3C00861547 /* PromotionsViewController.swift in Sources */,
-				048030022A89BB2800861547 /* Extension+CustomSidebar.swift in Sources */,
+				048030022A89BB2800861547 /* Extension+SidebarViewController.swift in Sources */,
 				0480300C2A8B0E9000861547 /* ProfileImageView.swift in Sources */,
 				04D355CF2A80F283001055AF /* ResultLocationCell.swift in Sources */,
 				048030162A8DAA0400861547 /* FreeJourneyViewController.swift in Sources */,
@@ -312,7 +308,6 @@
 				0480301A2A8DAA2900861547 /* HistoryViewController.swift in Sources */,
 				0433CAC828F387CC00495BF8 /* Extension+HomeViewController.swift in Sources */,
 				04D355DE2A867BA7001055AF /* CreateAccountViewController.swift in Sources */,
-				048030082A8A0BED00861547 /* DismissControl.swift in Sources */,
 				048030182A8DAA1C00861547 /* PaymentsViewController.swift in Sources */,
 				042F317D28F4BEC5002455E9 /* Extension+Protocol.swift in Sources */,
 				048030222A8DAA6800861547 /* WorkRidesViewController.swift in Sources */,
@@ -320,6 +315,7 @@
 				048AC36228F0D445003991A4 /* SceneDelegate.swift in Sources */,
 				048030202A8DAA5A00861547 /* AboutViewController.swift in Sources */,
 				0480300A2A8B0E3700861547 /* Label.swift in Sources */,
+				040F79802A97703D00A1C08D /* SidebarViewController.swift in Sources */,
 				048AC37828F0D714003991A4 /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
