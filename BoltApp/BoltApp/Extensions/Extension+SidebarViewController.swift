@@ -37,6 +37,7 @@ extension SidebarViewController {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SidebarCollectionViewCell", for: indexPath) as! SidebarCollectionViewCell
+        cell.delegate = self
         let item = tableData[indexPath.item]
         switch item.type {
         case .profileImage(let profileItem):

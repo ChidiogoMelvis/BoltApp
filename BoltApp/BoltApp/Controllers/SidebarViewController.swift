@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SidebarViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class SidebarViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SidebarCollectionViewCellDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
     lazy var sidebarCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -45,5 +45,12 @@ class SidebarViewController: UIViewController, UICollectionViewDelegate, UIColle
         view.backgroundColor = .white
         
     }
+    
+    func didSelectImage(cell: SidebarCollectionViewCell) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary
+            present(imagePicker, animated: true, completion: nil)
+        }
     
 }

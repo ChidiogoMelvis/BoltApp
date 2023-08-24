@@ -10,7 +10,7 @@ import MapKit
 import FloatingPanel
 import CoreLocation
 
-class HomeScreenViewController: UIViewController, ResultLocationDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate, SidebarViewControllerDelegate  {
+class HomeScreenViewController: UIViewController, ResultLocationDelegate, SidebarViewControllerDelegate {
    
     let panel = FloatingPanelController()
     
@@ -66,7 +66,6 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate, UIImag
             pin.coordinate = coordinates
 
             pin.title = location.name
-            //pin.subtitle = location.administrativeArea
 
             mapView.addAnnotation(pin)
 

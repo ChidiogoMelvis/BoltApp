@@ -111,13 +111,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		048030002A89BAB900861547 /* TableViewCells */ = {
+		048030002A89BAB900861547 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				04D355CE2A80F283001055AF /* ResultLocationCell.swift */,
 				040F79772A95B8C100A1C08D /* SidebarCollectionViewCell.swift */,
 			);
-			path = TableViewCells;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		048030122A8DA9BE00861547 /* SideBarScreens */ = {
@@ -177,7 +177,7 @@
 				048030122A8DA9BE00861547 /* SideBarScreens */,
 				04D355DB2A867B9A001055AF /* SigninViewController.swift */,
 				04D355DD2A867BA7001055AF /* CreateAccountViewController.swift */,
-				048030002A89BAB900861547 /* TableViewCells */,
+				048030002A89BAB900861547 /* Cells */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
