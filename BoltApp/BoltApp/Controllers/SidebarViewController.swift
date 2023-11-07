@@ -21,6 +21,8 @@ class SidebarViewController: UIViewController, UICollectionViewDelegate, UIColle
         collectionView.register(SidebarCollectionViewCell.self, forCellWithReuseIdentifier: "SidebarCollectionViewCell")
         return collectionView
     }()
+    
+    var selectedIndexPath: IndexPath?
 
     var tableData: [SidebarItem] = [profileImageItem,
                                     journeyItem,
@@ -46,11 +48,19 @@ class SidebarViewController: UIViewController, UICollectionViewDelegate, UIColle
         
     }
     
+//    func didSelectImage(cell: SidebarCollectionViewCell) {
+//            let imagePicker = UIImagePickerController()
+//            imagePicker.delegate = self
+//            imagePicker.sourceType = .photoLibrary
+//            present(imagePicker, animated: true, completion: nil)
+//        }
+    
     func didSelectImage(cell: SidebarCollectionViewCell) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = .photoLibrary
-            present(imagePicker, animated: true, completion: nil)
-        }
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self.parent as? SidebarViewController
+        imagePicker.sourceType = .photoLibrary
+        self.parent?.present(imagePicker, animated: true, completion: nil)
+    }
+
     
 }

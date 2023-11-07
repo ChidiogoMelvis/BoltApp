@@ -51,4 +51,3 @@ class LocationManager: NSObject {
     }
 
 }
-//place.administrativeArea ?? ""
