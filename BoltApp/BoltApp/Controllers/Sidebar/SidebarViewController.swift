@@ -23,7 +23,7 @@ class SidebarViewController: UIViewController, UICollectionViewDelegate, UIColle
     }()
     
     var selectedIndexPath: IndexPath?
-
+    
     var tableData: [SidebarItem] = [profileImageItem,
                                     journeyItem,
                                     paymentsItem,
@@ -38,29 +38,19 @@ class SidebarViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     weak var delegate: SidebarViewControllerDelegate?
-       
+    
     let toggleBackBtn = Button(image: UIImage(systemName: "xmark"), label: "", btnTitleColor: .clear, backgroundColor: .clear, radius: 0, imageColor: .black)
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         view.backgroundColor = .white
         
     }
-    
-//    func didSelectImage(cell: SidebarCollectionViewCell) {
-//            let imagePicker = UIImagePickerController()
-//            imagePicker.delegate = self
-//            imagePicker.sourceType = .photoLibrary
-//            present(imagePicker, animated: true, completion: nil)
-//        }
-    
     func didSelectImage(cell: SidebarCollectionViewCell) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self.parent as? SidebarViewController
         imagePicker.sourceType = .photoLibrary
         self.parent?.present(imagePicker, animated: true, completion: nil)
     }
-
-    
 }

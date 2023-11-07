@@ -13,6 +13,4 @@ class CreateAccountViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    
-
 }

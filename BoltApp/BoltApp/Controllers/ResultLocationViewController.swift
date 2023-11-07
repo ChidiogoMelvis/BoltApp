@@ -45,7 +45,7 @@ class ResultLocationViewController: UIViewController, UITextFieldDelegate {
         textField.layer.shadowColor = UIColor.darkGray.cgColor
         textField.layer.shadowOpacity = 0.8
         textField.layer.shadowOffset = CGSize(width: 0, height: 2)
-
+        
         return textField
     }()
     
@@ -111,5 +111,4 @@ class ResultLocationViewController: UIViewController, UITextFieldDelegate {
         }
         return true
     }
-    
 }

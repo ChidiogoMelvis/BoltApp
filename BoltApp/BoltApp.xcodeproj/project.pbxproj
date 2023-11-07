@@ -91,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041083852AF9C633007FD563 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				040F797F2A97703D00A1C08D /* SidebarViewController.swift */,
+				048030122A8DA9BE00861547 /* SideBarScreens */,
+			);
+			path = Sidebar;
+			sourceTree = "<group>";
+		};
 		0433CAC628F3346600495BF8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,8 +182,7 @@
 				048AC36328F0D445003991A4 /* ViewController.swift */,
 				0433CACA28F38E5300495BF8 /* ResultLocationViewController.swift */,
 				048AC37728F0D714003991A4 /* HomeScreenViewController.swift */,
-				040F797F2A97703D00A1C08D /* SidebarViewController.swift */,
-				048030122A8DA9BE00861547 /* SideBarScreens */,
+				041083852AF9C633007FD563 /* Sidebar */,
 				04D355DB2A867B9A001055AF /* SigninViewController.swift */,
 				04D355DD2A867BA7001055AF /* CreateAccountViewController.swift */,
 				048030002A89BAB900861547 /* Cells */,

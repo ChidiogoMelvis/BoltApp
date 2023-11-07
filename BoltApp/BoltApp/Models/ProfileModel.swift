@@ -62,13 +62,13 @@ struct SidebarItem {
         case profileImage(ProfileImage)
         case journey(Journey)
         case payments(Payments)
-       case  history(History)
+        case  history(History)
         case promotions(Promotions)
         case support(Support)
         case about(About)
         case workRides(WorkRides)
     }
-
+    
     let type: ItemType
 }
 

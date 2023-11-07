@@ -11,7 +11,7 @@ import FloatingPanel
 import CoreLocation
 
 class HomeScreenViewController: UIViewController, ResultLocationDelegate, SidebarViewControllerDelegate {
-   
+    
     let panel = FloatingPanelController()
     
     let sidebarWidth: CGFloat = 250
@@ -51,26 +51,24 @@ class HomeScreenViewController: UIViewController, ResultLocationDelegate, Sideba
     func setupResultVC() {
         let resultVC = ResultLocationViewController()
         resultVC.delegate = self
-        
         panel.set(contentViewController: resultVC)
         panel.addPanel(toParent: self)
     }
     
     func searchViewController(_ vc: ResultLocationViewController, didSelectLocation location: Location) {
         panel.move(to: .tip, animated: true)
-
+        
         mapView.removeAnnotations(mapView.annotations)
-
+        
         if let coordinates = location.coordinates {
             let pin = MKPointAnnotation()
             pin.coordinate = coordinates
-
+            
             pin.title = location.name
-
+            
             mapView.addAnnotation(pin)
-
+            
             mapView.setRegion(MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
         }
     }
-    
 }

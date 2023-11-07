@@ -28,8 +28,6 @@ extension SidebarViewController {
     @objc func toggleBackButtonTapped() {
         delegate?.sidebarDidToggleBack()
     }
-
-
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tableData.count
@@ -73,25 +71,10 @@ extension SidebarViewController {
         return CGSize(width: view.frame.width, height: 50)
     }
     
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        picker.dismiss(animated: true, completion: nil)
-//
-//        if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-//            // Update the profile image
-//            if let selectedIndexPath = sidebarCollectionView.indexPathsForSelectedItems?.first {
-//                if let cell = sidebarCollectionView.cellForItem(at: selectedIndexPath) as? SidebarCollectionViewCell {
-//                    cell.profileImage.image = selectedImage
-//                }
-//            }
-//        }
-//    }
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        //picker.dismiss(animated: true, completion: nil)
-       
         
         if let selectedImage = info[.originalImage] as? UIImage {
-        
+            
             if let selectedIndexPath = sidebarCollectionView.indexPathsForSelectedItems?.first {
                 if let cell = sidebarCollectionView.cellForItem(at: selectedIndexPath) as? SidebarCollectionViewCell {
                     cell.profileImage.contentMode = .scaleAspectFit
@@ -101,8 +84,8 @@ extension SidebarViewController {
             }
         }
     }
-       
-       func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-           picker.dismiss(animated: true, completion: nil)
-       }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
 }

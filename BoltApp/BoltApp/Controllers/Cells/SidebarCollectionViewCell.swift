@@ -135,7 +135,7 @@ class SidebarCollectionViewCell: UICollectionViewCell {
     }()
     
     var delegate: SidebarCollectionViewCellDelegate?
-     
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -163,6 +163,4 @@ class SidebarCollectionViewCell: UICollectionViewCell {
     @objc private func didTapImage() {
         delegate?.didSelectImage(cell: self)
     }
-    
-    
 }
