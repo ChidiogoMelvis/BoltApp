@@ -22,8 +22,6 @@ class SidebarViewController: UIViewController, UICollectionViewDelegate, UIColle
         return collectionView
     }()
     
-    var selectedIndexPath: IndexPath?
-    
     var tableData: [SidebarItem] = [profileImageItem,
                                     journeyItem,
                                     paymentsItem,
@@ -45,8 +43,8 @@ class SidebarViewController: UIViewController, UICollectionViewDelegate, UIColle
         super.viewDidLoad()
         setupViews()
         view.backgroundColor = .white
-        
     }
+    
     func didSelectImage(cell: SidebarCollectionViewCell) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self.parent as? SidebarViewController
